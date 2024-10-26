@@ -21,6 +21,7 @@ def connect_to_databases():
     sql_conn, head_office_conn, cosmos_conn = None, None, None  # Initialize variables
     try:
         sql_conn = connect_to_sql()  # Try to connect to SQL
+        
     except Exception as e:
         logger.error(f"Error connecting to SQL: {e}")
 
