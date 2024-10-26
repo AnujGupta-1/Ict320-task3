@@ -19,7 +19,7 @@ def connect_to_cosmos(container_name):
     container name in the Cosmos DB.
     """
     client = get_cosmos_client()  # Get the client first
-    database = client.get_database_client('CampsiteBookingsDB')  # Then get the database
+    database = client.get_database_client('CampsiteBookingsDB' )  # Then get the database
     container = database.get_container_client(container_name)  # Finally, get the container
     logger.info(f"Connected to Cosmos DB container '{container_name}' successfully.")
     return container
