@@ -66,3 +66,17 @@
 2024-10-26 18:29:30,347 - INFO - Campground application logging setup complete.
 2024-10-26 18:29:30,347 - WARNING - This is a warning message that will appear in the console and log file.
 2024-10-26 18:29:30,347 - ERROR - This is an error message.
+2024-10-26 18:32:58,730 - INFO - Campground application logging setup complete.
+2024-10-26 18:32:58,730 - WARNING - This is a warning message that will appear in the console and log file.
+2024-10-26 18:32:58,730 - ERROR - This is an error message.
+2024-10-26 18:32:59,065 - INFO - Directory pdfs already exists.
+2024-10-26 18:32:59,396 - INFO - Connected to Local SQL database successfully.
+2024-10-26 18:32:59,703 - INFO - Connected to Head Office SQL database successfully.
+2024-10-26 18:33:00,730 - ERROR - An error occurred during the main workflow: 'DatabaseProxy' object has no attribute 'get_database_client'
+2024-10-26 18:34:30,374 - INFO - Campground application logging setup complete.
+2024-10-26 18:34:30,374 - WARNING - This is a warning message that will appear in the console and log file.
+2024-10-26 18:34:30,374 - ERROR - This is an error message.
+2024-10-26 18:34:30,674 - INFO - Directory pdfs already exists.
+2024-10-26 18:34:31,259 - INFO - Connected to Local SQL database successfully.
+2024-10-26 18:34:31,567 - INFO - Connected to Head Office SQL database successfully.
+2024-10-26 18:34:32,226 - ERROR - An error occurred during the main workflow: 'DatabaseProxy' object has no attribute 'get_database_client'

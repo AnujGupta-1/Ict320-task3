@@ -6,7 +6,7 @@ import pyodbc
 # Cosmos DB connection details
 COSMOS_URI = "https://findacampsitebookings.documents.azure.com:443/"
 COSMOS_KEY = "WA3cA5mSjNEwYoPxHJKt3LJ6XMEYvkyUcPK08kxo5eQ4qWrrjG3ItOD1v5L1fHJgsxYcaHSIoBpIACDbhCWAdA=="
-DATABASE_NAME = "CampsiteBookingsDB"
+DATABASE_NAME = "CampsiteBookingDB"
 
 def get_cosmos_client():
     """
