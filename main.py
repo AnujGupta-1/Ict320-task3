@@ -9,6 +9,8 @@ from Utils.manage_campsite import initialize_campsites
 from Utils.manage_summary import generate_summary_report, display_summary, create_summary_object, process_summary
 from Utils.logger_config import logger
 
+
+
 # Configure logging to display only INFO level and above
 logging.basicConfig(level=logging.INFO, format='%(message)s')
 logging.getLogger('azure.cosmos').setLevel(logging.WARNING)  # Suppress detailed Cosmos DB logs

@@ -2,7 +2,7 @@ from datetime import timedelta
 from Database.cosmosDB import insert_booking_to_cosmos
 from models.campsite import allocate_campsite
 from models.booking import create_booking_data, Booking
-from Utils.confirm_booking import generate_confirmation
+from Utils.confirm_booking import generate_booking_confirmation
 from Utils.logger_config import logger
 
 
@@ -31,7 +31,7 @@ def allocate_and_confirm_booking(booking, campsites, campground_id):
             booking.update_campsite_info(allocated_campsite.site_number, allocated_campsite.rate_per_night)
 
             # Generate a confirmation PDF for the booking
-            generate_confirmation(booking)
+            generate_booking_confirmation(booking)
             logger.info(f"Booking {booking.booking_id} successfully allocated to Campsite {allocated_campsite.site_number}.")
             return allocated_campsite
         else:

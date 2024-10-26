@@ -1,0 +1,68 @@
+2024-10-26 17:39:41,731 - INFO - Campground application logging setup complete.
+2024-10-26 17:39:41,731 - WARNING - This is a warning message that will appear in the console and log file.
+2024-10-26 17:39:41,731 - ERROR - This is an error message.
+2024-10-26 17:40:55,987 - INFO - Campground application logging setup complete.
+2024-10-26 17:40:55,987 - WARNING - This is a warning message that will appear in the console and log file.
+2024-10-26 17:40:55,987 - ERROR - This is an error message.
+2024-10-26 17:42:46,492 - INFO - Campground application logging setup complete.
+2024-10-26 17:42:46,600 - WARNING - This is a warning message that will appear in the console and log file.
+2024-10-26 17:42:46,600 - ERROR - This is an error message.
+2024-10-26 17:44:22,557 - INFO - Campground application logging setup complete.
+2024-10-26 17:44:22,557 - WARNING - This is a warning message that will appear in the console and log file.
+2024-10-26 17:44:22,557 - ERROR - This is an error message.
+2024-10-26 17:45:24,340 - INFO - Campground application logging setup complete.
+2024-10-26 17:45:24,340 - WARNING - This is a warning message that will appear in the console and log file.
+2024-10-26 17:45:24,341 - ERROR - This is an error message.
+2024-10-26 17:45:25,010 - INFO - Created directory pdfs.
+2024-10-26 17:46:03,624 - INFO - Campground application logging setup complete.
+2024-10-26 17:46:03,625 - WARNING - This is a warning message that will appear in the console and log file.
+2024-10-26 17:46:03,625 - ERROR - This is an error message.
+2024-10-26 17:46:04,542 - INFO - Directory pdfs already exists.
+2024-10-26 18:00:10,389 - INFO - Campground application logging setup complete.
+2024-10-26 18:00:10,389 - WARNING - This is a warning message that will appear in the console and log file.
+2024-10-26 18:00:10,393 - ERROR - This is an error message.
+2024-10-26 18:00:11,636 - INFO - Directory pdfs already exists.
+2024-10-26 18:05:17,073 - INFO - Campground application logging setup complete.
+2024-10-26 18:05:17,073 - WARNING - This is a warning message that will appear in the console and log file.
+2024-10-26 18:05:17,073 - ERROR - This is an error message.
+2024-10-26 18:05:17,859 - INFO - Directory pdfs already exists.
+2024-10-26 18:05:18,658 - ERROR - Failed to connect to Local SQL Database: ('28000', '[28000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Login failed for user \'anuj\'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Cannot open database "CampsiteSQL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 18 for SQL Server]Invalid connection string attribute (0); [28000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Login failed for user \'anuj\'. (18456); [28000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Cannot open database "CampsiteSQL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 18 for SQL Server]Invalid connection string attribute (0)')
+2024-10-26 18:05:18,659 - ERROR - Error connecting to Local SQL database: ('28000', '[28000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Login failed for user \'anuj\'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Cannot open database "CampsiteSQL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 18 for SQL Server]Invalid connection string attribute (0); [28000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Login failed for user \'anuj\'. (18456); [28000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Cannot open database "CampsiteSQL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 18 for SQL Server]Invalid connection string attribute (0)')
+2024-10-26 18:05:19,883 - INFO - Connected to Head Office SQL database successfully.
+2024-10-26 18:05:21,899 - INFO - Successfully connected to Cosmos DB.
+2024-10-26 18:05:21,899 - ERROR - An error occurred during the main workflow: 'DatabaseProxy' object has no attribute 'get_database_client'
+2024-10-26 18:06:27,397 - INFO - Campground application logging setup complete.
+2024-10-26 18:06:27,403 - WARNING - This is a warning message that will appear in the console and log file.
+2024-10-26 18:06:27,405 - ERROR - This is an error message.
+2024-10-26 18:06:28,155 - INFO - Directory pdfs already exists.
+2024-10-26 18:06:28,451 - ERROR - Failed to connect to Local SQL Database: ('28000', '[28000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Login failed for user \'anuj\'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Cannot open database "CampsiteSQL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 18 for SQL Server]Invalid connection string attribute (0); [28000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Login failed for user \'anuj\'. (18456); [28000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Cannot open database "CampsiteSQL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 18 for SQL Server]Invalid connection string attribute (0)')
+2024-10-26 18:06:28,454 - ERROR - Error connecting to Local SQL database: ('28000', '[28000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Login failed for user \'anuj\'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Cannot open database "CampsiteSQL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 18 for SQL Server]Invalid connection string attribute (0); [28000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Login failed for user \'anuj\'. (18456); [28000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Cannot open database "CampsiteSQL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 18 for SQL Server]Invalid connection string attribute (0)')
+2024-10-26 18:06:29,166 - INFO - Connected to Head Office SQL database successfully.
+2024-10-26 18:06:30,450 - INFO - Successfully connected to Cosmos DB.
+2024-10-26 18:06:30,450 - ERROR - An error occurred during the main workflow: 'DatabaseProxy' object has no attribute 'get_database_client'
+2024-10-26 18:06:42,305 - INFO - Campground application logging setup complete.
+2024-10-26 18:06:42,306 - WARNING - This is a warning message that will appear in the console and log file.
+2024-10-26 18:06:42,307 - ERROR - This is an error message.
+2024-10-26 18:06:43,014 - INFO - Directory pdfs already exists.
+2024-10-26 18:06:43,265 - ERROR - Failed to connect to Local SQL Database: ('28000', '[28000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Login failed for user \'anuj\'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Cannot open database "CampsiteSQL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 18 for SQL Server]Invalid connection string attribute (0); [28000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Login failed for user \'anuj\'. (18456); [28000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Cannot open database "CampsiteSQL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 18 for SQL Server]Invalid connection string attribute (0)')
+2024-10-26 18:06:43,291 - ERROR - Error connecting to Local SQL database: ('28000', '[28000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Login failed for user \'anuj\'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Cannot open database "CampsiteSQL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 18 for SQL Server]Invalid connection string attribute (0); [28000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Login failed for user \'anuj\'. (18456); [28000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Cannot open database "CampsiteSQL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 18 for SQL Server]Invalid connection string attribute (0)')
+2024-10-26 18:06:44,644 - INFO - Connected to Head Office SQL database successfully.
+2024-10-26 18:06:45,928 - INFO - Successfully connected to Cosmos DB.
+2024-10-26 18:06:45,928 - ERROR - An error occurred during the main workflow: 'DatabaseProxy' object has no attribute 'get_database_client'
+2024-10-26 18:14:31,166 - INFO - Campground application logging setup complete.
+2024-10-26 18:14:31,166 - WARNING - This is a warning message that will appear in the console and log file.
+2024-10-26 18:14:31,166 - ERROR - This is an error message.
+2024-10-26 18:14:31,994 - INFO - Directory pdfs already exists.
+2024-10-26 18:14:47,142 - ERROR - Error connecting to Local SQL database: ('08001', '[08001] [Microsoft][ODBC Driver 18 for SQL Server]TCP Provider: Timeout error [258].  (258) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 18 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 18 for SQL Server]Invalid connection string attribute (0); [08001] [Microsoft][ODBC Driver 18 for SQL Server]Unable to complete login process due to delay in login response (258)')
+2024-10-26 18:14:47,987 - INFO - Connected to Head Office SQL database successfully.
+2024-10-26 18:14:49,302 - ERROR - An error occurred during the main workflow: 'DatabaseProxy' object has no attribute 'get_database_client'
+2024-10-26 18:15:04,166 - INFO - Campground application logging setup complete.
+2024-10-26 18:15:04,166 - WARNING - This is a warning message that will appear in the console and log file.
+2024-10-26 18:15:04,166 - ERROR - This is an error message.
+2024-10-26 18:15:04,740 - INFO - Directory pdfs already exists.
+2024-10-26 18:15:15,463 - INFO - Connected to Local SQL database successfully.
+2024-10-26 18:15:15,791 - INFO - Connected to Head Office SQL database successfully.
+2024-10-26 18:15:16,846 - ERROR - An error occurred during the main workflow: 'DatabaseProxy' object has no attribute 'get_database_client'
+2024-10-26 18:29:30,347 - INFO - Campground application logging setup complete.
+2024-10-26 18:29:30,347 - WARNING - This is a warning message that will appear in the console and log file.
+2024-10-26 18:29:30,347 - ERROR - This is an error message.

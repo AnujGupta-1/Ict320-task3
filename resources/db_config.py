@@ -1,6 +1,6 @@
 from azure.cosmos import CosmosClient
 import pyodbc
-from Utils.logger_config import logger
+
 
 
 # Cosmos DB connection details
@@ -15,13 +15,9 @@ def get_cosmos_client():
     Returns:
         CosmosClient: The client to interact with the Cosmos DB database.
     """
-    try:
-        client = CosmosClient(COSMOS_URI, COSMOS_KEY)
-        logger.info("Successfully connected to Cosmos DB.")
-        return client.get_database_client(DATABASE_NAME)
-    except Exception as e:
-        logger.error(f"Failed to connect to Cosmos DB: {e}")
-        raise
+    client = CosmosClient(COSMOS_URI, COSMOS_KEY)
+    return client.get_database_client(DATABASE_NAME)
+    
 
 
 # Azure SQL connection details
@@ -49,7 +45,7 @@ def get_sql_connection():
 
 
 SQL_SERVER_LOCAL = 'campserver.database.windows.net'
-SQL_DATABASE_LOCAL = 'CampsiteSQL'
+SQL_DATABASE_LOCAL = 'CamsiteSQL'
 SQL_USERNAME_LOCAL = 'anuj'
 SQL_PASSWORD_LOCAL = 'Hammer@345'
 
@@ -60,19 +56,16 @@ def get_sql_connection_local():
     Returns:
         pyodbc.Connection: The connection object to interact with the local SQL database.
     """
-    try:
-        conn = pyodbc.connect(
-            'DRIVER={ODBC Driver 18 for SQL Server};'
-            f'SERVER={SQL_SERVER_LOCAL};'
-            f'DATABASE={SQL_DATABASE_LOCAL};'
-            f'UID={SQL_USERNAME_LOCAL};'
-            f'PWD={SQL_PASSWORD_LOCAL};'
-            'Encrypt=no;'  # Encryption might not be needed for local connections
-            'TrustServerCertificate=yes;'  # Often useful for local development
-            'Connection Timeout=30;'
+
+    conn = pyodbc.connect(
+        'DRIVER={ODBC Driver 18 for SQL Server};'
+        f'SERVER={SQL_SERVER_LOCAL};'
+        f'DATABASE={SQL_DATABASE_LOCAL};'
+        f'UID={SQL_USERNAME_LOCAL};'
+        f'PWD={SQL_PASSWORD_LOCAL};'
+        'Encrypt=no;'  # Encryption might not be needed for local connections
+        'TrustServerCertificate=yes;'  # Often useful for local development
+        'Connection Timeout=30;'
         )
-        logger.info("Successfully connected to Local SQL Database.")
-        return conn
-    except pyodbc.Error as e:
-        logger.error(f"Failed to connect to Local SQL Database: {e}")
-        raise
+    return conn
+    

@@ -4,7 +4,7 @@ from Database.sqlDB import connect_to_sql
 from Database.headOfficeDB import connect_to_head_office
 from models.summary import Summary
 from Utils.pdf_generator import PDFGenerator
-from Database.cosmosDB import connect_to_cosmos, upsert_summary_pdf_to_cosmos
+from Database.cosmosDB import connect_to_cosmos, upsert_booking_pdf_to_cosmos #upsert_summary_pdf_to_cosmos
 from Utils.logger_config import logger
 
 
@@ -151,7 +151,7 @@ def upload_summary_to_cosmos(pdf_path, summary):
     try:
         summary_container = connect_to_cosmos("Summary_PDFs")
         summary_id = f"{summary.campground_id}_{summary.summary_date.strftime('%Y-%m-%d')}"
-        upsert_summary_pdf_to_cosmos(summary_container, pdf_path, summary_id)
+        upsert_booking_pdf_to_cosmos(summary_container, pdf_path, summary_id)
         logger.info("Summary PDF upserted into Cosmos DB successfully.")
     except Exception as e:
         logger.error(f"Error uploading summary PDF to Cosmos DB: {e}")
