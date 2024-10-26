@@ -80,3 +80,123 @@
 2024-10-26 18:34:31,259 - INFO - Connected to Local SQL database successfully.
 2024-10-26 18:34:31,567 - INFO - Connected to Head Office SQL database successfully.
 2024-10-26 18:34:32,226 - ERROR - An error occurred during the main workflow: 'DatabaseProxy' object has no attribute 'get_database_client'
+2024-10-26 18:45:25,807 - INFO - Campground application logging setup complete.
+2024-10-26 18:45:25,807 - WARNING - This is a warning message that will appear in the console and log file.
+2024-10-26 18:45:25,807 - ERROR - This is an error message.
+2024-10-26 18:45:26,137 - INFO - Directory pdfs already exists.
+2024-10-26 18:45:26,433 - INFO - Connected to Local SQL database successfully.
+2024-10-26 18:45:26,723 - INFO - Connected to Head Office SQL database successfully.
+2024-10-26 18:45:27,852 - ERROR - Error connecting to Cosmos DB: 'DatabaseProxy' object has no attribute 'get_database_client'
+2024-10-26 18:45:27,853 - INFO - Initialized 30 campsites: 10 Small, 10 Medium, 10 Large.
+2024-10-26 18:45:27,855 - INFO - Initialized 30 campsites.
+2024-10-26 18:45:27,943 - INFO - Fetched 46 bookings from the Head Office database.
+2024-10-26 18:45:27,958 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:45:27,958 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:45:27,958 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:45:27,958 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:45:27,958 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:45:27,958 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:45:27,958 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:45:27,973 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:45:27,973 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:45:27,973 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:45:27,973 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:45:27,976 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:45:27,976 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:45:27,977 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:45:27,977 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:45:27,979 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:45:27,979 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:45:27,979 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:45:27,980 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:45:27,981 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:45:27,981 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:45:27,982 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:45:27,982 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:45:27,982 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:45:27,982 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:45:27,982 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:45:27,984 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:45:27,984 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:45:27,985 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:45:27,985 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:45:27,986 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:45:27,986 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:45:27,987 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:45:27,987 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:45:27,987 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:45:27,987 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:45:27,987 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:45:27,987 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:45:27,987 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:45:27,987 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:45:27,987 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:45:27,987 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:45:27,987 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:45:27,987 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:45:27,987 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:45:27,987 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:45:27,993 - INFO - Fetched and processed 0 bookings from Head Office.
+2024-10-26 18:45:27,993 - ERROR - An error occurred during the main workflow: process_bookings() takes 4 positional arguments but 5 were given
+2024-10-26 18:45:28,021 - INFO - SQL connection closed.
+2024-10-26 18:45:28,042 - INFO - Head Office connection closed.
+2024-10-26 18:46:03,017 - INFO - Campground application logging setup complete.
+2024-10-26 18:46:03,017 - WARNING - This is a warning message that will appear in the console and log file.
+2024-10-26 18:46:03,018 - ERROR - This is an error message.
+2024-10-26 18:46:03,304 - INFO - Directory pdfs already exists.
+2024-10-26 18:46:07,023 - INFO - Connected to Local SQL database successfully.
+2024-10-26 18:46:07,325 - INFO - Connected to Head Office SQL database successfully.
+2024-10-26 18:46:07,909 - ERROR - Error connecting to Cosmos DB: 'DatabaseProxy' object has no attribute 'get_database_client'
+2024-10-26 18:46:07,909 - INFO - Initialized 30 campsites: 10 Small, 10 Medium, 10 Large.
+2024-10-26 18:46:07,909 - INFO - Initialized 30 campsites.
+2024-10-26 18:46:07,924 - INFO - Fetched 46 bookings from the Head Office database.
+2024-10-26 18:46:07,951 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:46:07,951 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:46:07,951 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:46:07,951 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:46:07,951 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:46:07,951 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:46:07,951 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:46:07,958 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:46:07,958 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:46:07,959 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:46:07,960 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:46:07,961 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:46:07,961 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:46:07,961 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:46:07,962 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:46:07,963 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:46:07,963 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:46:07,964 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:46:07,964 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:46:07,965 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:46:07,965 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:46:07,965 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:46:07,966 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:46:07,966 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:46:07,967 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:46:07,967 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:46:07,968 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:46:07,968 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:46:07,969 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:46:07,969 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:46:07,969 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:46:07,970 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:46:07,970 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:46:07,970 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:46:07,971 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:46:07,971 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:46:07,972 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:46:07,972 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:46:07,972 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:46:07,973 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:46:07,973 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:46:07,973 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:46:07,975 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:46:07,975 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:46:07,975 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:46:07,975 - ERROR - Error processing booking record: type object 'Booking' has no attribute 'from_db_record'
+2024-10-26 18:46:07,975 - INFO - Fetched and processed 0 bookings from Head Office.
+2024-10-26 18:46:07,975 - ERROR - An error occurred during the main workflow: process_bookings() takes 4 positional arguments but 5 were given
+2024-10-26 18:46:08,011 - INFO - SQL connection closed.
+2024-10-26 18:46:08,030 - INFO - Head Office connection closed.

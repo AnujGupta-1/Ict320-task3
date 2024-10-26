@@ -18,15 +18,22 @@ logging.getLogger('urllib3').setLevel(logging.WARNING)       # Suppress urllib3 
 
 
 def connect_to_databases():
-    """
-    Establish connections to SQL, Head Office, and Cosmos DB.
+    sql_conn, head_office_conn, cosmos_conn = None, None, None  # Initialize variables
+    try:
+        sql_conn = connect_to_sql()  # Try to connect to SQL
+    except Exception as e:
+        logger.error(f"Error connecting to SQL: {e}")
 
-    :return: Tuple of connections (sql_conn, head_office_conn, cosmos_conn).
-    """
-    sql_conn = connect_to_sql()
-    head_office_conn = connect_to_head_office()
-    cosmos_conn = connect_to_cosmos("Bookings")
-    logger.info("Successfully connected to all databases.")
+    try:
+        head_office_conn = connect_to_head_office()  # Try to connect to Head Office
+    except Exception as e:
+        logger.error(f"Error connecting to Head Office: {e}")
+
+    try:
+        cosmos_conn = connect_to_cosmos("Bookings")  # Try to connect to Cosmos DB
+    except Exception as e:
+        logger.error(f"Error connecting to Cosmos DB: {e}")
+
     return sql_conn, head_office_conn, cosmos_conn
 
 
@@ -91,13 +98,6 @@ def process_and_display_summary(bookings, campsites):
 
 
 def close_connections(sql_conn, head_office_conn, cosmos_conn):
-    """
-    Closes all database connections.
-
-    :param sql_conn: Connection to SQL database.
-    :param head_office_conn: Connection to the Head Office database.
-    :param cosmos_conn: Connection to the Cosmos DB.
-    """
     if sql_conn:
         sql_conn.close()
         logger.info("SQL connection closed.")
@@ -105,7 +105,9 @@ def close_connections(sql_conn, head_office_conn, cosmos_conn):
         head_office_conn.close()
         logger.info("Head Office connection closed.")
     if cosmos_conn:
+        cosmos_conn.close()
         logger.info("Cosmos DB connection handled internally.")
+
 
 
 def main_workflow():
