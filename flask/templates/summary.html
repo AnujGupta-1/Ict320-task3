@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Booking Summary</title>
+</head>
+<body>
+    <header>
+        <h1>Summary Report</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('booking_list') }}">Bookings</a></li>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Daily Summary - {{ summary['date'] }}</h2>
+        <p>Total Sales: {{ summary['total_sales'] }}</p>
+        <p>Total Bookings: {{ summary['total_bookings'] }}</p>
+        <p>Successful Allocations: {{ summary['successful_allocations'] }}</p>
+        <p>Failed Allocations: {{ summary['failed_allocations'] }}</p>
+
+        <h3>Campsite Utilization</h3>
+        <ul>
+            {% for site_id, data in summary['campsite_utilization'].items() %}
+                <li>Campsite {{ site_id }} ({{ data['size'] }}): {{ data['bookings_count'] }} bookings</li>
+            {% endfor %}
+        </ul>
+    </section>
+</body>
+</html>

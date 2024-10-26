@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Booking List</title>
+</head>
+<body>
+    <header>
+        <h1>All Bookings</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('summary') }}">Summary</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <ul>
+            {% for booking in bookings %}
+                <li>
+                    <a href="{{ url_for('booking_detail', booking_id=booking['booking_id']) }}">
+                        Booking ID: {{ booking['booking_id'] }} - {{ booking['customer_name'] }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
+</body>
+</html>
