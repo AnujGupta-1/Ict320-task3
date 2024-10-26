@@ -8,16 +8,22 @@ from tenacity import retry, wait_fixed, stop_after_attempt
 # Function to connect to Cosmos DB (now using db_config.py)
 def connect_to_cosmos(container_name):
     """
-    Connects to Cosmos DB container using configuration from db_config.py.
+    The function `connect_to_cosmos` establishes a connection to a specific container in a Cosmos DB
+    instance.
     
-    :param container_name: Name of the container to connect to.
-    :return: The Cosmos DB container client.
+    :param container_name: The `connect_to_cosmos` function is designed to connect to a specific
+    container within a Cosmos DB database. The `container_name` parameter is the name of the container
+    that you want to connect to in the Cosmos DB database. This function first gets the Cosmos client,
+    then the database client, and
+    :return: The function `connect_to_cosmos` is returning the container client for the specified
+    container name in the Cosmos DB.
     """
-    client = get_cosmos_client()
-    database = client.get_database_client("CampsiteBookingsDB")  # Example database name
-    container = database.get_container_client(container_name)
+    client = get_cosmos_client()  # Get the client first
+    database = client.get_database_client('CampsiteBookingsDB')  # Then get the database
+    container = database.get_container_client(container_name)  # Finally, get the container
     logger.info(f"Connected to Cosmos DB container '{container_name}' successfully.")
     return container
+
 
 @retry(wait=wait_fixed(2), stop=stop_after_attempt(3))
 # Function to insert booking into Cosmos DB
