@@ -1,5 +1,6 @@
 from datetime import timedelta
 from Database.cosmosDB import insert_booking_to_cosmos
+from Database.headOfficeDB import insert_booking_to_head_office, connect_to_head_office
 from models.campsite import allocate_campsite
 from models.booking import create_booking_data, Booking
 from Utils.confirm_booking import generate_booking_confirmation
@@ -42,7 +43,7 @@ def allocate_and_confirm_booking(booking, campsites, campground_id):
         return None
 
 
-def insert_booking_to_db(cosmos_conn, booking):
+def insert_booking_to_db(cosmos_conn,head_conn, booking):
     """
     Inserts a booking record into Cosmos DB.
 
@@ -53,11 +54,13 @@ def insert_booking_to_db(cosmos_conn, booking):
         booking_data = create_booking_data(booking)
         insert_booking_to_cosmos(cosmos_conn, booking_data)
         logger.info(f"Booking {booking.booking_id} inserted into Cosmos DB successfully.")
+        insert_booking_to_head_office(head_conn, booking_data)
+        logger.info(f"Booking {booking.booking_id} inserted into Head Office database successfully.")
     except Exception as e:
         logger.error(f"Error inserting Booking {booking.booking_id} into Cosmos DB: {e}")
 
 
-def process_single_booking(booking, campsites, cosmos_conn, campground_id):
+def process_single_booking(booking, campsites, cosmos_conn, head_conn,campground_id):
     """
     Processes a single booking by allocating a campsite, generating a confirmation, and inserting into Cosmos DB.
 
@@ -77,12 +80,13 @@ def process_single_booking(booking, campsites, cosmos_conn, campground_id):
 
     if allocated_campsite:
         # Insert booking into Cosmos DB if allocation and confirmation were successful
-        insert_booking_to_db(cosmos_conn, booking)
+        insert_booking_to_db(cosmos_conn,head_conn, booking)
+        
     else:
         logger.warning(f"Booking {booking.booking_id} could not be processed due to lack of availability.")
 
 
-def process_bookings(bookings, campsites, cosmos_conn, campground_id):
+def process_bookings(bookings, campsites, cosmos_conn,head_conn, campground_id):
     """
     Processes a list of bookings by allocating campsites, generating confirmations, and inserting into Cosmos DB.
 
@@ -92,4 +96,4 @@ def process_bookings(bookings, campsites, cosmos_conn, campground_id):
     :param campground_id: The ID of the campground.
     """
     for booking in bookings:
-        process_single_booking(booking, campsites, cosmos_conn, campground_id)
+        process_single_booking(booking, campsites, cosmos_conn, head_conn, campground_id)

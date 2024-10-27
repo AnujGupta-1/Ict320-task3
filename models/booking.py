@@ -134,6 +134,8 @@ class Booking:
         :param data: Dictionary containing booking data.
         :return: Booking object.
         """
+        logger.debug(f"Converting the following dictionary into Booking object: {data}")
+
         return Booking(
             booking_id=data['booking_id'],
             customer_id=data['customer_id'],

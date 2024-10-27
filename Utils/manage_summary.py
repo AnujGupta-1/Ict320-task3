@@ -216,3 +216,21 @@ def generate_summary_report(bookings, campsites):
 
     logger.info(f"Summary Data: {summary_data}")
     return summary_data
+
+def display_summary(summary_data):
+    """
+    Logs the summary data to the console for display purposes.
+    :param summary_data: Dictionary containing the summary data
+    """
+    logger.info("Displaying Summary Data:")
+    logger.info(f"Date: {summary_data['date']}")
+    logger.info(f"Total Sales: {summary_data['total_sales']}")
+    logger.info(f"Total Bookings: {summary_data['total_bookings']}")
+    logger.info(f"Successful Allocations: {summary_data['successful_allocations']}")
+    logger.info(f"Failed Allocations: {summary_data['failed_allocations']}")
+    
+    # Log campsite utilization
+    for campsite_id, utilization in summary_data['campsite_utilization'].items():
+        logger.info(f"Campsite {campsite_id} - Size: {utilization['size']}, "
+                    f"Rate per Night: {utilization['rate_per_night']}, "
+                    f"Bookings Count: {utilization['bookings_count']}")

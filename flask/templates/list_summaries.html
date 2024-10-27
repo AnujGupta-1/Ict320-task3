@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}Summaries{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1 class="display-4">Available Summaries</h1>
+        <p class="lead">Here are the generated summaries. Click on a summary to download the PDF.</p>
+        <hr class="my-4">
+
+        <ul id="summaries-list" class="list-group">
+            <!-- Summaries will be loaded here dynamically using JavaScript -->
+        </ul>
+
+        <a class="btn btn-primary btn-lg mt-4" href="/" role="button">Back to Home</a>
+    </div>
+
+    <script>
+        // Fetch and display the list of available summaries
+        fetch('/list-summaries')
+            .then(response => response.json())
+            .then(data => {
+                const summariesList = document.getElementById('summaries-list');
+                data.available_summaries.forEach(summary => {
+                    const listItem = document.createElement('li');
+                    listItem.className = 'list-group-item';
+
+                    const link = document.createElement('a');
+                    link.href = `/view-summary/${summary}`;
+                    link.textContent = summary;
+
+                    listItem.appendChild(link);
+                    summariesList.appendChild(listItem);
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching summaries:', error);
+            });
+    </script>
+{% endblock %}

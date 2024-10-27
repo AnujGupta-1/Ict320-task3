@@ -59,7 +59,7 @@ def fetch_and_prepare_bookings(head_office_conn):
     return bookings
 
 
-def process_all_bookings(bookings, campsites, cosmos_conn, campground_id):
+def process_all_bookings(bookings, campsites, cosmos_conn,head_office_conn, campground_id):
     """
     Processes all bookings by allocating campsites and updating databases.
 
@@ -69,7 +69,7 @@ def process_all_bookings(bookings, campsites, cosmos_conn, campground_id):
     :param cosmos_conn: Connection to the Cosmos DB.
     """
     campground_id = 1159010  # Student ID as campground ID
-    process_bookings(bookings, campsites, cosmos_conn, campground_id)
+    process_bookings(bookings, campsites, cosmos_conn, head_office_conn, campground_id)
     logger.info("Processed all bookings and allocated campsites.")
 
 
@@ -128,7 +128,7 @@ def main_workflow():
 
         # Step 4: Process bookings and allocate campsites
         campground_id = 1159010
-        process_all_bookings(bookings, campsites, cosmos_conn,campground_id)
+        process_all_bookings(bookings, campsites, cosmos_conn, head_office_conn, campground_id)
 
         # Step 5: Generate, display, and process the summary
         process_and_display_summary(bookings, campsites)

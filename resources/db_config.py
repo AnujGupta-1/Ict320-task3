@@ -20,7 +20,9 @@ def get_cosmos_client():
     
 
 
-# Azure SQL connection details
+import pyodbc
+
+# Azure head office connection details
 SQL_SERVER = 'headoffice1.database.windows.net'
 SQL_DATABASE = 'camping'
 SQL_USERNAME = 'anuj'
@@ -34,14 +36,17 @@ def get_sql_connection():
         pyodbc.Connection: The connection object to interact with the SQL database.
     """
     conn = pyodbc.connect(
-        'DRIVER={ODBC Driver 17 for SQL Server};'
-        f'SERVER={SQL_SERVER};'
+        'DRIVER={ODBC Driver 18 for SQL Server};'
+        f'SERVER=tcp:{SQL_SERVER},1433;'
         f'DATABASE={SQL_DATABASE};'
         f'UID={SQL_USERNAME};'
-        f'PWD={SQL_PASSWORD}'
+        f'PWD={SQL_PASSWORD};'
+        'Encrypt=yes;'
+        'TrustServerCertificate=no;'
+        'Connection Timeout=30;'
     )
     return conn
-    
+
 
 
 SQL_SERVER_LOCAL = 'campserver.database.windows.net'
