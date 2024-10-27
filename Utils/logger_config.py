@@ -37,4 +37,4 @@ logging.getLogger('urllib3').setLevel(logging.CRITICAL)
 # Example logging usage
 logger.info("Campground application logging setup complete.")
 logger.warning("This is a warning message that will appear in the console and log file.")
-logger.error("This is an error message.")
+

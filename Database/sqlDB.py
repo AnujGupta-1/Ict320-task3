@@ -1,4 +1,7 @@
 import pyodbc
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from Utils.logger_config import logger
 from resources.db_config import get_sql_connection_local  # Importing the local SQL connection function
 
@@ -119,9 +122,11 @@ def setup_database():
             create_tables(cursor)  # Create required tables
             conn.commit()  # Commit the changes to the database
 
-            # Execute initial setup SQL files (if needed)
-            create_schema_path = "Assets/create_head_office_schema.sql"  # Path to schema creation script
-            load_data_path = "Assets/load_head_office_data.sql"  # Path to data loading script
+            # Correct the path formatting using os.path.join and raw strings
+            base_dir = os.path.dirname(os.path.abspath(__file__))
+            create_schema_path = os.path.join(base_dir, "resources", "sql", "create_head_office.sql")
+            load_data_path = os.path.join(base_dir, "resources", "sql", "Head Office - Load Data (1).sql")
+
             execute_sql_file(cursor, create_schema_path)
             execute_sql_file(cursor, load_data_path)
             conn.commit()  # Commit the changes after executing scripts

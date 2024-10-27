@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Bookings</title>
+</head>
+<body>
+    <h1>View All Bookings</h1>
+    <table border="1">
+        <tr>
+            <th>Booking ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Check-in Date</th>
+            <th>Check-out Date</th>
+            <th>Campsite ID</th>
+        </tr>
+        {% for booking in bookings %}
+        <tr>
+            <td>{{ booking.id }}</td>
+            <td>{{ booking.name }}</td>
+            <td>{{ booking.email }}</td>
+            <td>{{ booking.check_in }}</td>
+            <td>{{ booking.check_out }}</td>
+            <td>{{ booking.campsite_id }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <a href="{{ url_for('index') }}">Back to Home</a>
+</body>
+</html>

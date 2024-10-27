@@ -1,0 +1,16 @@
+2024-10-27 11:09:31,824 - INFO - Campground application logging setup complete.
+2024-10-27 11:09:31,824 - WARNING - This is a warning message that will appear in the console and log file.
+2024-10-27 11:09:32,390 - INFO - Connected to Local SQL database successfully.
+2024-10-27 11:09:32,415 - INFO - Schema 'camping' checked/created successfully.
+2024-10-27 11:09:32,481 - INFO - Tables created successfully.
+2024-10-27 11:09:32,498 - ERROR - SQL file not found: c:\Users\anuz9\OneDrive - University of the Sunshine Coast\Desktop\Task3_Ict320_anuj-gupta\Ict320-task3\Database\resources/sql/create_head_office.sql
+2024-10-27 11:09:32,498 - ERROR - SQL file not found: c:\Users\anuz9\OneDrive - University of the Sunshine Coast\Desktop\Task3_Ict320_anuj-gupta\Ict320-task3\Database\resources/sql/Head Office - Load Data (1).sql
+2024-10-27 11:09:32,524 - INFO - Database setup completed and connection closed.
+2024-10-27 11:11:34,133 - INFO - Campground application logging setup complete.
+2024-10-27 11:11:34,133 - WARNING - This is a warning message that will appear in the console and log file.
+2024-10-27 11:11:34,675 - INFO - Connected to Local SQL database successfully.
+2024-10-27 11:11:34,691 - INFO - Schema 'camping' checked/created successfully.
+2024-10-27 11:11:34,749 - INFO - Tables created successfully.
+2024-10-27 11:11:34,766 - ERROR - SQL file not found: c:\Users\anuz9\OneDrive - University of the Sunshine Coast\Desktop\Task3_Ict320_anuj-gupta\Ict320-task3\Database\resources\sql\create_head_office.sql
+2024-10-27 11:11:34,766 - ERROR - SQL file not found: c:\Users\anuz9\OneDrive - University of the Sunshine Coast\Desktop\Task3_Ict320_anuj-gupta\Ict320-task3\Database\resources\sql\Head Office - Load Data (1).sql
+2024-10-27 11:11:34,790 - INFO - Database setup completed and connection closed.

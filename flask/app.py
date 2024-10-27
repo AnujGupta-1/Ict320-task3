@@ -1,179 +1,152 @@
-import sys
+from flask import Flask, render_template, request, send_file, redirect, url_for
 import os
-import logging
-import io
-from flask import Flask, render_template, request, redirect, url_for, flash, send_file
+import sys 
+import uuid
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from Database.cosmosDB import connect_to_cosmos
 from models.booking import Booking
-from Utils.Booking_Process import process_bookings
-from Database.sqlDB import connect_to_sql
-from Database.cosmosDB import connect_to_cosmos, fetch_cosmos_bookings
-from Utils.manage_summary import display_summary, generate_summary_pdf, create_summary_object,insert_summary_into_local, insert_summary_into_head_office, insert_summary_into_databases
-from Utils.manage_campsite import initialize_campsites
-from Database.headOfficeDB import connect_to_head_office, fetch_bookings
+from models.campsite import Campsite
+from Utils.Booking_Process import allocate_and_confirm_booking
+from Utils.confirm_booking import generate_booking_confirmation
 from Utils.logger_config import logger
+from Utils.manage_campsite import initialize_campsites
+from Utils.manage_summary import create_summary_object, process_summary, generate_summary_report
+from azure.cosmos import exceptions
 
-# Flask app initialization
 app = Flask(__name__)
-app.secret_key = 'supersecret'
 
-# Logging configuration
-logging.basicConfig(level=logging.INFO, format='%(message)s')
+# Initialize campsites (assuming enough campsites are available)
+campsites = initialize_campsites()
 
-# Global variable for processed bookings
-processed_bookings = []
+# Cosmos DB connection
+container_name = 'your_container_name'  # Replace with actual container name
+cosmos_container = connect_to_cosmos(container_name)
 
-# Route: Home Page
 @app.route('/')
-def index():
-    """
-    Displays the home page with bookings from Cosmos DB.
-    """
+def home():
+    return render_template('index.html')
+
+@app.route('/booking', methods=['POST'])
+def booking():
     try:
-        cosmos_conn = connect_to_cosmos("Bookings")
-        bookings = fetch_cosmos_bookings(cosmos_conn)
-        if bookings:
-            logger.info(f"Fetched {len(bookings)} bookings from Cosmos DB.")
+        # Capture form data
+        booking_data = {
+            "booking_id": request.form['booking_id'],
+            "customer_id": request.form['customer_id'],
+            "booking_date": request.form['booking_date'],
+            "arrival_date": request.form['arrival_date'],
+            "campsite_size": request.form['campsite_size'],
+            "num_campsites": request.form['num_campsites'],
+            "campground_id": request.form['campground_id'],
+            "customer_name": request.form['customer_name'],
+        }
+
+        # Create Booking object
+        booking = Booking(**booking_data)
+
+        # Allocate campsite and generate confirmation
+        allocated_campsite = allocate_and_confirm_booking(booking, campsites, booking_data["campground_id"])
+        
+        if allocated_campsite:
+            # Insert booking into Cosmos DB (if it doesn't already exist)
+            booking_id = booking_data["booking_id"]
+            query = "SELECT * FROM c WHERE c.booking_id = @booking_id"
+            parameters = [{"name": "@booking_id", "value": booking_id}]
+            existing_booking = list(cosmos_container.query_items(query=query, parameters=parameters, enable_cross_partition_query=True))
+
+            if existing_booking:
+                return render_template('error.html', error="Booking already exists.")
+            else:
+                booking_data['id'] = str(uuid.uuid4())  # Generate unique item ID
+                cosmos_container.create_item(booking_data)  # Insert new booking
+                logger.info(f"Booking {booking_id} inserted into Cosmos DB successfully.")
+
+            # Generate confirmation PDF and send it to the user
+            confirmation_file = generate_booking_confirmation(booking, allocated_campsite)
+            return send_file(confirmation_file, as_attachment=True)
         else:
-            flash('No bookings available.', 'info')
-        return render_template('index.html', bookings=bookings)
-    except Exception as e:
-        logger.error(f"Error loading index: {str(e)}")
-        flash(f'Error loading index: {str(e)}', 'danger')
-        return redirect(url_for('index'))
+            return render_template('failure.html', data=booking_data)
 
-# Route: Process Bookings
-@app.route('/process_bookings', methods=['POST'])
-def process_bookings_route():
-    """
-    Processes bookings from the Head Office DB, allocates campsites, and updates Cosmos DB.
-    """
-    global processed_bookings
+    except Exception as e:
+        return render_template('error.html', error=str(e))
+
+@app.route('/showData')
+def showData():
     try:
-        sql_conn = connect_to_sql()
-        head_office_conn = connect_to_head_office()
-        cosmos_conn = connect_to_cosmos("Bookings")
+        # Retrieve all bookings from Cosmos DB
+        query = "SELECT * FROM c"
+        bookings = list(cosmos_container.query_items(query=query, enable_cross_partition_query=True))
+        return render_template("showData.html", bookings=bookings)
+    except exceptions.CosmosHttpResponseError as e:
+        return render_template('error.html', error=str(e))
 
-        raw_bookings = fetch_bookings(head_office_conn)
-        bookings = [Booking.from_db_record(record) for record in raw_bookings]
-        campsites = initialize_campsites()
+@app.route('/manage_campsites', methods=['GET', 'POST'])
+def manage_campsites():
+    if request.method == 'POST':
+        try:
+            # Add a new campsite from form input
+            site_number = int(request.form['site_number'])
+            size = request.form['size']
+            rate_per_night = float(request.form['rate_per_night'])
 
-        # Process bookings and update Cosmos DB
-        process_bookings(bookings, campsites, head_office_conn, cosmos_conn, campground_id=1121132)
-        processed_bookings = bookings
-        flash('Bookings processed successfully!', 'success')
-        return redirect(url_for('summary'))
-    except Exception as e:
-        logger.error(f"Error processing bookings: {str(e)}")
-        flash(f'Error processing bookings: {str(e)}', 'danger')
-        return redirect(url_for('index'))
+            # Check if the campsite already exists
+            if any(campsite.site_number == site_number for campsite in campsites):
+                raise ValueError(f"Campsite {site_number} already exists.")
 
-# Route: View Bookings
-@app.route('/bookings')
-def view_bookings():
-    """
-    Displays the list of bookings from Cosmos DB.
-    """
+            # Create and add new campsite
+            new_campsite = Campsite(site_number=site_number, size=size, rate_per_night=rate_per_night)
+            campsites.append(new_campsite)
+            logger.info(f"Added new campsite {site_number} successfully.")
+            
+            return redirect(url_for('manage_campsites'))
+        except Exception as e:
+            return render_template('error.html', error=str(e))
+
+    # GET request: Show the current campsites
+    return render_template('manage_campsites.html', campsites=campsites)
+
+@app.route('/remove_campsite', methods=['POST'])
+def remove_campsite_route():
     try:
-        cosmos_conn = connect_to_cosmos("Bookings")
-        bookings = fetch_cosmos_bookings(cosmos_conn)
-        if bookings:
-            logger.info(f"Fetched {len(bookings)} bookings from Cosmos DB.")
-        return render_template('bookings_list.html', bookings=bookings)
+        site_number = int(request.form['site_number'])
+        global campsites
+        
+        # Find and remove the campsite
+        campsites = [campsite for campsite in campsites if campsite.site_number != site_number]
+        logger.info(f"Campsite {site_number} removed successfully.")
+        
+        return redirect(url_for('manage_campsites'))
     except Exception as e:
-        logger.error(f"Error fetching bookings: {str(e)}")
-        flash(f'Error fetching bookings: {str(e)}', 'danger')
-        return redirect(url_for('index'))
+        return render_template('error.html', error=str(e))
 
-# Route: Summary
-@app.route('/summary')
+@app.route('/summary', methods=['GET'])
 def summary():
-    """
-    Displays the summary of the processed bookings.
-    """
-    global processed_bookings
     try:
-        # If no processed bookings, fetch from Cosmos DB
-        if not processed_bookings:
-            bookings = fetch_cosmos_bookings(connect_to_cosmos("Bookings"))
-        else:
-            bookings = processed_bookings
+        # Retrieve all bookings from Cosmos DB
+        query = "SELECT * FROM c"
+        bookings = list(cosmos_container.query_items(query=query, enable_cross_partition_query=True))
 
-        if not bookings:
-            flash('No bookings available. Please process the bookings first.', 'warning')
-            return redirect(url_for('index'))
+        # Generate summary object
+        summary = create_summary_object(bookings)
 
-        campsites = initialize_campsites()
-        summary_data = generate_summary_pdf(bookings, campsites)
-        display_summary(summary_data)
-        create_summary_object(bookings)
-        insert_summary_into_local(bookings)
-        insert_summary_into_databases(bookings)
-        insert_summary_into_head_office(bookings)
+        # Process summary (insert into databases, generate PDF, etc.)
+        process_summary(summary)
 
-        flash('Summary generated and stored successfully!', 'success')
+        # Generate summary data for displaying
+        summary_data = generate_summary_report(bookings, campsites)
         return render_template('summary.html', summary=summary_data)
+
     except Exception as e:
-        logger.error(f"Error generating summary: {str(e)}")
-        flash(f"Error generating summary: {str(e)}", 'danger')
-        return redirect(url_for('index'))
+        return render_template('error.html', error=str(e))
 
-# Route: Show PDF Confirmation
-@app.route('/pdf/<int:booking_id>')
-def show_pdf(booking_id):
-    """
-    Fetches and displays a PDF confirmation for a specific booking.
-    """
-    try:
-        pdf_data = fetch_pdf_from_cosmos(booking_id)
-        return send_file(
-            io.BytesIO(pdf_data),
-            mimetype='application/pdf',
-            download_name=f'confirmation_{booking_id}.pdf'
-        )
-    except Exception as e:
-        logger.error(f"Error fetching PDF for Booking ID {booking_id}: {str(e)}")
-        flash(f'Error fetching PDF for Booking ID {booking_id}: {str(e)}', 'danger')
-        return redirect(url_for('view_bookings'))
-
-# Function: Fetch PDF from Cosmos DB
-def fetch_pdf_from_cosmos(booking_id):
-    """
-    Fetches the PDF data associated with a booking from Cosmos DB.
-    """
-    try:
-        cosmos_conn_bookings = connect_to_cosmos("Bookings")
-        cosmos_conn_pdfs = connect_to_cosmos("PDFs")
-
-        # Query to fetch the booking and associated PDF ID
-        query_booking = f"SELECT * FROM c WHERE c.booking_id = {booking_id}"
-        booking_items = list(cosmos_conn_bookings.query_items(query=query_booking, enable_cross_partition_query=True))
-
-        if not booking_items:
-            raise ValueError(f"Booking not found for booking ID {booking_id}")
-
-        booking = booking_items[0]
-        pdf_id = booking.get('pdf_id')
-
-        if not pdf_id:
-            raise ValueError(f"No PDF ID found for booking ID {booking_id}")
-
-        # Query to fetch the PDF data
-        query_pdf = f"SELECT * FROM c WHERE c.pdf_id = '{pdf_id}'"
-        pdf_items = list(cosmos_conn_pdfs.query_items(query=query_pdf, partition_key=pdf_id, enable_cross_partition_query=True))
-
-        if not pdf_items:
-            raise ValueError(f"PDF not found for PDF ID {pdf_id}")
-
-        pdf_data = pdf_items[0].get('pdf_data')
-
-        if isinstance(pdf_data, str):
-            import base64
-            pdf_data = base64.b64decode(pdf_data)
-
-        return pdf_data
-    except Exception as e:
-        logger.error(f"Failed to fetch PDF data from Cosmos DB: {e}")
-        raise
+# 404 error handler
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
 
 if __name__ == '__main__':
-    app.run(debug=True, host='127.0.0.1', port=5000)
+    if os.environ.get('FLASK_RUN_FROM_CLI') != 'true':  # Check if Flask is not running from CLI to avoid duplicate messages
+        host = '127.0.0.1'
+        port = 5000
+        print(f"Flask app is running! Access it at http://{host}:{port}/")
+    app.run(debug=True)
