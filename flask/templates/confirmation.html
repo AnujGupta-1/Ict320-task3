@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+
+{% block title %}Confirmation{% endblock %}
+
+{% block content %}
+    <h2>Booking Confirmation</h2>
+    <p>Booking confirmation for booking ID {{ booking_id }} has been generated successfully.</p>
+    <a href="/generate-confirmation/{{ booking_id }}" class="btn btn-primary">Download PDF</a>
+{% endblock %}

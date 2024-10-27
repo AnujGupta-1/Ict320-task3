@@ -6,7 +6,7 @@ from Database.cosmosDB import connect_to_cosmos
 from models.booking import Booking
 from Utils.Booking_Process import process_bookings
 from Utils.manage_campsite import initialize_campsites
-from Utils.manage_summary import generate_summary_report, display_summary, create_summary_object, process_summary
+from Utils.manage_summary import *
 from Utils.logger_config import logger
 
 
@@ -75,23 +75,25 @@ def process_all_bookings(bookings, campsites, cosmos_conn, campground_id):
 
 def process_and_display_summary(bookings, campsites):
     """
-    Generates, displays, and processes the summary for the bookings and campsite utilization.
+    Generates and processes the summary for the bookings and campsite utilization.
 
     :param bookings: List of Booking objects.
     :param campsites: List of Campsite objects.
     """
     try:
-        # Step 1: Generate Summary
+        # Step 1: Generate Summary Data (booking allocations and campsite utilization)
         summary_data = generate_summary_report(bookings, campsites)
 
-        # Step 2: Display the generated summary
-        display_summary(summary_data)
-
-        # Step 3: Create the summary object for database insertion and Cosmos upload
+        # Step 2: Create the Summary object for further processing (database insertion, PDF generation)
         summary = create_summary_object(bookings)
 
-        # Step 4: Insert into databases, generate PDF, and upload to Cosmos
+        # Step 3: Process the summary, including database insertion and PDF generation
         process_summary(summary)
+
+        # Step 4: Generate and save the summary PDF using the PDFGenerator
+        pdf_gen = PDFGenerator("Daily Summary Report")
+        pdf_path = pdf_gen.generate_summary(summary)
+        logger.info(f"Summary PDF generated and saved at {pdf_path}")
 
     except Exception as e:
         logger.error(f"Error in processing the summary: {e}")

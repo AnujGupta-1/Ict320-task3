@@ -1,3 +1,4 @@
+from azure.cosmos import exceptions
 from models.campsite import Campsite
 from Utils.logger_config import logger
 
@@ -32,3 +33,6 @@ def initialize_campsites():
                 f"{len(small_campsites)} Small, {len(medium_campsites)} Medium, {len(large_campsites)} Large.")
 
     return campsites
+
+
+

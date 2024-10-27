@@ -94,7 +94,7 @@ class PDFGenerator(FPDF):
     def generate_summary(self, summary):
         """
         Generates a summary PDF for a day's bookings.
-
+    
         :param summary: The Summary object containing summary details.
         :return: The file path to the saved summary PDF.
         """
@@ -104,10 +104,14 @@ class PDFGenerator(FPDF):
         self.add_content_line("Summary Date", summary.summary_date)
         self.add_content_line("Total Sales", summary.total_sales, currency=True)
         self.add_content_line("Total Bookings", summary.total_bookings)
-
+    
+        # Properly format the summary date to avoid invalid characters
+        formatted_date = summary.summary_date.strftime('%Y-%m-%d')  # Remove time or format it correctly if necessary
+    
         # Define the filename and save the PDF
-        filename = os.path.join(PDF_FOLDER, f"summary_{summary.summary_date}.pdf")
+        filename = os.path.join(PDF_FOLDER, f"summary_{formatted_date}.pdf")
         return self.save_pdf(filename)
+
 
 
 # Usage example:

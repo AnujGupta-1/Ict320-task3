@@ -1,14 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily Summary</title>
-</head>
-<body>
-    <h1>Daily Summary</h1>
-    <p>Total Bookings: {{ summary.total_bookings }}</p>
-    <p>Total Sales: ${{ summary.total_sales }}</p>
-    <a href="{{ url_for('home') }}">Back to Home</a>
-</body>
-</html>
+{% extends "layout.html" %}
+
+{% block title %}Daily Summary{% endblock %}
+
+{% block content %}
+    <h2>Daily Summary Report</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Campground ID</th>
+                <th>Summary Date</th>
+                <th>Total Sales</th>
+                <th>Total Bookings</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ summary.campground_id }}</td>
+                <td>{{ summary.summary_date }}</td>
+                <td>{{ summary.total_sales }}</td>
+                <td>{{ summary.total_bookings }}</td>
+                <td>
+                    <a href="/generate-summary" class="btn btn-primary">Download PDF</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

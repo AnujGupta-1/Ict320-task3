@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Form</title>
+</head>
+<body>
+    <h1>Booking Form</h1>
+    
+    <a href="{{ url_for('index') }}">Back to Home</a>
+
+    <form action="/process_transactions" method="POST">
+        <label for="customer_name">Customer Name:</label><br>
+        <input type="text" id="customer_name" name="customer_name" required><br><br>
+        
+        <label for="arrival_date">Arrival Date:</label><br>
+        <input type="date" id="arrival_date" name="arrival_date" required><br><br>
+        
+        <label for="departure_date">Departure Date:</label><br>
+        <input type="date" id="departure_date" name="departure_date" required><br><br>
+
+        <label for="campsite_size">Campsite Size:</label><br>
+        <select id="campsite_size" name="campsite_size" required>
+            <option value="Small">Small</option>
+            <option value="Medium">Medium</option>
+            <option value="Large">Large</option>
+        </select><br><br>
+
+        <input type="submit" value="Submit Booking">
+    </form>
+</body>
+</html>

@@ -71,24 +71,7 @@ class Booking:
         self.campsite_id = campsite_id
         self.total_cost = rate_per_night * 7 * self.num_campsites  # Calculate cost based on the 7-day booking duration
 
-    def to_dict(self):
-        """
-        Converts the booking object to a dictionary format.
 
-        :return: Dictionary representation of the booking object.
-        """
-        return {
-            "booking_id": self.booking_id,
-            "customer_id": self.customer_id,
-            "booking_date": self.booking_date.strftime('%Y-%m-%d'),
-            "arrival_date": self.arrival_date.strftime('%Y-%m-%d'),
-            "campsite_size": self.campsite_size,
-            "num_campsites": self.num_campsites,
-            "campground_id": self.campground_id,
-            "campsite_id": self.campsite_id,
-            "total_cost": self.total_cost,
-            "customer_name": self.customer_name
-        }
 
     def from_db_record(record):
         """
@@ -161,6 +144,22 @@ class Booking:
             campground_id=data.get('campground_id', None),
             customer_name=data.get('customer_name', None)
         ).set_total_cost(data.get('total_cost', 0))
+
+    def to_dict(self):
+        """Converts the Booking object to a dictionary for JSON serialization."""
+        return {
+            'booking_id': self.booking_id,
+            'customer_id': self.customer_id,
+            'booking_date': self.booking_date.strftime('%Y-%m-%d'),
+            'arrival_date': self.arrival_date.strftime('%Y-%m-%d'),
+            'campsite_size': self.campsite_size,
+            'num_campsites': self.num_campsites,
+            'campground_id': self.campground_id,
+            'campsite_id': self.campsite_id,
+            'total_cost': self.total_cost,
+            'customer_name': self.customer_name
+        }
+
 
     def set_total_cost(self, total_cost):
         """

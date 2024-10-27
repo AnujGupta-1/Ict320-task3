@@ -1,16 +1,443 @@
-2024-10-27 11:09:31,824 - INFO - Campground application logging setup complete.
-2024-10-27 11:09:31,824 - WARNING - This is a warning message that will appear in the console and log file.
-2024-10-27 11:09:32,390 - INFO - Connected to Local SQL database successfully.
-2024-10-27 11:09:32,415 - INFO - Schema 'camping' checked/created successfully.
-2024-10-27 11:09:32,481 - INFO - Tables created successfully.
-2024-10-27 11:09:32,498 - ERROR - SQL file not found: c:\Users\anuz9\OneDrive - University of the Sunshine Coast\Desktop\Task3_Ict320_anuj-gupta\Ict320-task3\Database\resources/sql/create_head_office.sql
-2024-10-27 11:09:32,498 - ERROR - SQL file not found: c:\Users\anuz9\OneDrive - University of the Sunshine Coast\Desktop\Task3_Ict320_anuj-gupta\Ict320-task3\Database\resources/sql/Head Office - Load Data (1).sql
-2024-10-27 11:09:32,524 - INFO - Database setup completed and connection closed.
-2024-10-27 11:11:34,133 - INFO - Campground application logging setup complete.
-2024-10-27 11:11:34,133 - WARNING - This is a warning message that will appear in the console and log file.
-2024-10-27 11:11:34,675 - INFO - Connected to Local SQL database successfully.
-2024-10-27 11:11:34,691 - INFO - Schema 'camping' checked/created successfully.
-2024-10-27 11:11:34,749 - INFO - Tables created successfully.
-2024-10-27 11:11:34,766 - ERROR - SQL file not found: c:\Users\anuz9\OneDrive - University of the Sunshine Coast\Desktop\Task3_Ict320_anuj-gupta\Ict320-task3\Database\resources\sql\create_head_office.sql
-2024-10-27 11:11:34,766 - ERROR - SQL file not found: c:\Users\anuz9\OneDrive - University of the Sunshine Coast\Desktop\Task3_Ict320_anuj-gupta\Ict320-task3\Database\resources\sql\Head Office - Load Data (1).sql
-2024-10-27 11:11:34,790 - INFO - Database setup completed and connection closed.
+2024-10-27 15:05:00,706 - INFO - Campground application logging setup complete.
+2024-10-27 15:05:00,708 - WARNING - This is a warning message that will appear in the console and log file.
+2024-10-27 15:05:00,743 - INFO - Directory pdfs already exists.
+2024-10-27 15:05:00,786 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-27 15:05:00,786 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-27 15:05:00,786 - INFO -  * Restarting with stat
+2024-10-27 15:05:01,275 - INFO - Campground application logging setup complete.
+2024-10-27 15:05:01,275 - WARNING - This is a warning message that will appear in the console and log file.
+2024-10-27 15:05:01,326 - INFO - Directory pdfs already exists.
+2024-10-27 15:05:01,357 - WARNING -  * Debugger is active!
+2024-10-27 15:05:01,360 - INFO -  * Debugger PIN: 140-675-533
+2024-10-27 15:05:18,708 - INFO - Connected to Cosmos DB container 'Bookings' successfully.
+2024-10-27 15:05:18,915 - INFO - Fetched 46 bookings.
+2024-10-27 15:05:18,915 - ERROR - Error processing end of day: 'dict' object has no attribute 'campsite_id'
+2024-10-27 15:05:18,916 - INFO - 127.0.0.1 - - [27/Oct/2024 15:05:18] "[32mGET /end_of_day HTTP/1.1[0m" 302 -
+2024-10-27 15:05:18,916 - INFO - 127.0.0.1 - - [27/Oct/2024 15:05:18] "GET /error HTTP/1.1" 200 -
+2024-10-27 15:05:24,076 - INFO - 127.0.0.1 - - [27/Oct/2024 15:05:24] "GET / HTTP/1.1" 200 -
+2024-10-27 15:17:49,131 - INFO -  * Detected change in 'c:\\Users\\anuz9\\OneDrive - University of the Sunshine Coast\\Desktop\\Task3_Ict320_anuj-gupta\\Ict320-task3\\Utils\\manage_summary.py', reloading
+2024-10-27 15:17:49,330 - INFO -  * Restarting with stat
+2024-10-27 15:17:49,954 - INFO - Campground application logging setup complete.
+2024-10-27 15:17:49,954 - WARNING - This is a warning message that will appear in the console and log file.
+2024-10-27 15:17:50,005 - INFO - Directory pdfs already exists.
+2024-10-27 15:17:50,031 - WARNING -  * Debugger is active!
+2024-10-27 15:17:50,036 - INFO -  * Debugger PIN: 140-675-533
+2024-10-27 15:24:08,902 - INFO - Connected to Cosmos DB container 'Bookings' successfully.
+2024-10-27 15:24:09,144 - INFO - Fetched 46 bookings.
+2024-10-27 15:24:09,144 - ERROR - Error processing end of day: 'dict' object has no attribute 'campsite_id'
+2024-10-27 15:24:09,145 - INFO - 127.0.0.1 - - [27/Oct/2024 15:24:09] "[32mGET /end_of_day HTTP/1.1[0m" 302 -
+2024-10-27 15:24:09,153 - INFO - 127.0.0.1 - - [27/Oct/2024 15:24:09] "GET /error HTTP/1.1" 200 -
+2024-10-27 15:24:12,214 - INFO - 127.0.0.1 - - [27/Oct/2024 15:24:12] "GET / HTTP/1.1" 200 -
+2024-10-27 15:30:00,706 - INFO - Campground application logging setup complete.
+2024-10-27 15:30:00,707 - WARNING - This is a warning message that will appear in the console and log file.
+2024-10-27 15:30:00,756 - INFO - Directory pdfs already exists.
+2024-10-27 15:30:00,799 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-27 15:30:00,799 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-27 15:30:00,799 - INFO -  * Restarting with stat
+2024-10-27 15:30:01,500 - INFO - Campground application logging setup complete.
+2024-10-27 15:30:01,500 - WARNING - This is a warning message that will appear in the console and log file.
+2024-10-27 15:30:01,599 - INFO - Directory pdfs already exists.
+2024-10-27 15:30:01,625 - WARNING -  * Debugger is active!
+2024-10-27 15:30:01,625 - INFO -  * Debugger PIN: 140-675-533
+2024-10-27 15:30:06,597 - INFO - 127.0.0.1 - - [27/Oct/2024 15:30:06] "GET / HTTP/1.1" 200 -
+2024-10-27 15:30:09,446 - INFO - Connected to Cosmos DB container 'Bookings' successfully.
+2024-10-27 15:30:09,664 - INFO - Fetched 46 bookings.
+2024-10-27 15:30:09,664 - ERROR - Error processing end of day: 'dict' object has no attribute 'campground_id'
+2024-10-27 15:30:09,665 - INFO - 127.0.0.1 - - [27/Oct/2024 15:30:09] "[32mGET /end_of_day HTTP/1.1[0m" 302 -
+2024-10-27 15:30:09,672 - INFO - 127.0.0.1 - - [27/Oct/2024 15:30:09] "GET /error HTTP/1.1" 200 -
+2024-10-27 15:30:11,626 - INFO - 127.0.0.1 - - [27/Oct/2024 15:30:11] "GET / HTTP/1.1" 200 -
+2024-10-27 15:39:52,546 - INFO -  * Detected change in 'c:\\Users\\anuz9\\OneDrive - University of the Sunshine Coast\\Desktop\\Task3_Ict320_anuj-gupta\\Ict320-task3\\models\\booking.py', reloading
+2024-10-27 15:39:52,617 - INFO -  * Restarting with stat
+2024-10-27 15:39:53,284 - INFO - Campground application logging setup complete.
+2024-10-27 15:39:53,284 - WARNING - This is a warning message that will appear in the console and log file.
+2024-10-27 15:39:53,345 - INFO - Directory pdfs already exists.
+2024-10-27 15:39:53,369 - WARNING -  * Debugger is active!
+2024-10-27 15:39:53,374 - INFO -  * Debugger PIN: 140-675-533
+2024-10-27 15:40:05,255 - INFO -  * Detected change in 'c:\\Users\\anuz9\\OneDrive - University of the Sunshine Coast\\Desktop\\Task3_Ict320_anuj-gupta\\Ict320-task3\\models\\booking.py', reloading
+2024-10-27 15:40:05,300 - INFO -  * Restarting with stat
+2024-10-27 15:40:05,794 - INFO - Campground application logging setup complete.
+2024-10-27 15:40:05,794 - WARNING - This is a warning message that will appear in the console and log file.
+2024-10-27 15:40:05,839 - INFO - Directory pdfs already exists.
+2024-10-27 15:40:05,869 - WARNING -  * Debugger is active!
+2024-10-27 15:40:05,869 - INFO -  * Debugger PIN: 140-675-533
+2024-10-27 15:42:43,840 - INFO -  * Detected change in 'c:\\Users\\anuz9\\OneDrive - University of the Sunshine Coast\\Desktop\\Task3_Ict320_anuj-gupta\\Ict320-task3\\models\\booking.py', reloading
+2024-10-27 15:42:43,900 - INFO -  * Restarting with stat
+2024-10-27 15:42:44,500 - INFO - Campground application logging setup complete.
+2024-10-27 15:42:44,500 - WARNING - This is a warning message that will appear in the console and log file.
+2024-10-27 15:42:44,567 - INFO - Directory pdfs already exists.
+2024-10-27 15:42:44,595 - WARNING -  * Debugger is active!
+2024-10-27 15:42:44,601 - INFO -  * Debugger PIN: 140-675-533
+2024-10-27 15:43:37,322 - INFO -  * Detected change in 'c:\\Users\\anuz9\\OneDrive - University of the Sunshine Coast\\Desktop\\Task3_Ict320_anuj-gupta\\Ict320-task3\\Database\\cosmosDB.py', reloading
+2024-10-27 15:43:37,421 - INFO -  * Restarting with stat
+2024-10-27 15:43:37,926 - INFO - Campground application logging setup complete.
+2024-10-27 15:43:37,926 - WARNING - This is a warning message that will appear in the console and log file.
+2024-10-27 15:43:37,961 - INFO - Directory pdfs already exists.
+2024-10-27 15:43:37,986 - WARNING -  * Debugger is active!
+2024-10-27 15:43:37,991 - INFO -  * Debugger PIN: 140-675-533
+2024-10-27 15:44:32,548 - INFO -  * Detected change in 'c:\\Users\\anuz9\\OneDrive - University of the Sunshine Coast\\Desktop\\Task3_Ict320_anuj-gupta\\Ict320-task3\\Database\\cosmosDB.py', reloading
+2024-10-27 15:44:32,593 - INFO -  * Restarting with stat
+2024-10-27 15:44:33,301 - INFO - Campground application logging setup complete.
+2024-10-27 15:44:33,301 - WARNING - This is a warning message that will appear in the console and log file.
+2024-10-27 15:44:33,337 - INFO - Directory pdfs already exists.
+2024-10-27 15:44:33,359 - WARNING -  * Debugger is active!
+2024-10-27 15:44:33,364 - INFO -  * Debugger PIN: 140-675-533
+2024-10-27 15:45:37,369 - INFO -  * Detected change in 'c:\\Users\\anuz9\\OneDrive - University of the Sunshine Coast\\Desktop\\Task3_Ict320_anuj-gupta\\Ict320-task3\\Database\\cosmosDB.py', reloading
+2024-10-27 15:45:37,422 - INFO -  * Restarting with stat
+2024-10-27 15:45:37,888 - INFO - Campground application logging setup complete.
+2024-10-27 15:45:37,888 - WARNING - This is a warning message that will appear in the console and log file.
+2024-10-27 15:45:37,924 - INFO - Directory pdfs already exists.
+2024-10-27 15:45:37,946 - WARNING -  * Debugger is active!
+2024-10-27 15:45:37,950 - INFO -  * Debugger PIN: 140-675-533
+2024-10-27 15:45:53,788 - INFO - 127.0.0.1 - - [27/Oct/2024 15:45:53] "GET / HTTP/1.1" 200 -
+2024-10-27 15:45:56,581 - INFO - Connected to Cosmos DB container 'Bookings' successfully.
+2024-10-27 15:45:56,835 - INFO - Fetched 46 bookings.
+2024-10-27 15:45:56,835 - INFO - Summary for Campground 1159010 on 2024-10-27 is valid.
+2024-10-27 15:45:56,835 - INFO - Summary created and validated for 2024-10-27 00:00:00.
+2024-10-27 15:45:57,204 - INFO - Connected to Local SQL database successfully.
+2024-10-27 15:45:57,292 - INFO - Summary inserted into local SQL database.
+2024-10-27 15:45:57,292 - INFO - Summary inserted into the local SQL database.
+2024-10-27 15:45:57,551 - INFO - Connected to Head Office SQL database successfully.
+2024-10-27 15:45:57,623 - INFO - Summary inserted into Head Office database.
+2024-10-27 15:45:57,624 - INFO - Summary inserted into the Head Office database.
+2024-10-27 15:45:57,659 - INFO - PDF saved as pdfs\summary_2024-10-27.pdf
+2024-10-27 15:45:57,785 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-27 15:45:58,040 - INFO - PDF pdfs\summary_2024-10-27.pdf upserted successfully for booking 1159010_2024-10-27.
+2024-10-27 15:45:58,040 - INFO - Summary PDF upserted into Cosmos DB successfully.
+2024-10-27 15:45:58,040 - INFO - Summary processing completed successfully.
+2024-10-27 15:45:58,041 - ERROR - Error processing end of day: generate_booking_confirmation() takes 1 positional argument but 2 were given
+2024-10-27 15:45:58,043 - INFO - 127.0.0.1 - - [27/Oct/2024 15:45:58] "[32mGET /end_of_day HTTP/1.1[0m" 302 -
+2024-10-27 15:45:58,055 - INFO - 127.0.0.1 - - [27/Oct/2024 15:45:58] "GET /error HTTP/1.1" 200 -
+2024-10-27 15:48:01,151 - INFO - Campground application logging setup complete.
+2024-10-27 15:48:01,151 - WARNING - This is a warning message that will appear in the console and log file.
+2024-10-27 15:48:01,193 - INFO - Directory pdfs already exists.
+2024-10-27 15:48:01,235 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-27 15:48:01,235 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-27 15:48:01,235 - INFO -  * Restarting with stat
+2024-10-27 15:48:01,691 - INFO - Campground application logging setup complete.
+2024-10-27 15:48:01,691 - WARNING - This is a warning message that will appear in the console and log file.
+2024-10-27 15:48:01,727 - INFO - Directory pdfs already exists.
+2024-10-27 15:48:01,757 - WARNING -  * Debugger is active!
+2024-10-27 15:48:01,758 - INFO -  * Debugger PIN: 140-675-533
+2024-10-27 15:48:12,314 - INFO - 127.0.0.1 - - [27/Oct/2024 15:48:12] "GET / HTTP/1.1" 200 -
+2024-10-27 15:48:16,244 - INFO - Connected to Cosmos DB container 'Bookings' successfully.
+2024-10-27 15:48:16,481 - INFO - Fetched 46 bookings.
+2024-10-27 15:48:16,487 - INFO - 127.0.0.1 - - [27/Oct/2024 15:48:16] "GET /view_bookings HTTP/1.1" 200 -
+2024-10-27 15:48:39,705 - INFO - 127.0.0.1 - - [27/Oct/2024 15:48:39] "GET / HTTP/1.1" 200 -
+2024-10-27 15:48:45,902 - INFO - Connected to Cosmos DB container 'Bookings' successfully.
+2024-10-27 15:48:46,130 - INFO - Fetched 46 bookings.
+2024-10-27 15:48:46,131 - INFO - Summary for Campground 1159010 on 2024-10-27 is valid.
+2024-10-27 15:48:46,131 - INFO - Summary created and validated for 2024-10-27 00:00:00.
+2024-10-27 15:48:46,416 - INFO - Connected to Local SQL database successfully.
+2024-10-27 15:48:46,479 - INFO - Summary inserted into local SQL database.
+2024-10-27 15:48:46,480 - INFO - Summary inserted into the local SQL database.
+2024-10-27 15:48:46,776 - INFO - Connected to Head Office SQL database successfully.
+2024-10-27 15:48:46,838 - INFO - Summary inserted into Head Office database.
+2024-10-27 15:48:46,839 - INFO - Summary inserted into the Head Office database.
+2024-10-27 15:48:46,885 - INFO - PDF saved as pdfs\summary_2024-10-27.pdf
+2024-10-27 15:48:47,035 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-27 15:48:47,249 - INFO - PDF pdfs\summary_2024-10-27.pdf upserted successfully for booking 1159010_2024-10-27.
+2024-10-27 15:48:47,250 - INFO - Summary PDF upserted into Cosmos DB successfully.
+2024-10-27 15:48:47,250 - INFO - Summary processing completed successfully.
+2024-10-27 15:48:47,250 - ERROR - Error processing end of day: generate_booking_confirmation() takes 1 positional argument but 2 were given
+2024-10-27 15:48:47,251 - INFO - 127.0.0.1 - - [27/Oct/2024 15:48:47] "[32mGET /end_of_day HTTP/1.1[0m" 302 -
+2024-10-27 15:48:47,257 - INFO - 127.0.0.1 - - [27/Oct/2024 15:48:47] "GET /error HTTP/1.1" 200 -
+2024-10-27 15:53:44,856 - INFO - Connected to Cosmos DB container 'Bookings' successfully.
+2024-10-27 15:53:45,066 - INFO - Fetched 46 bookings.
+2024-10-27 15:53:45,081 - INFO - 127.0.0.1 - - [27/Oct/2024 15:53:45] "GET /view_bookings HTTP/1.1" 200 -
+2024-10-27 15:54:35,110 - INFO - Connected to Cosmos DB container 'Bookings' successfully.
+2024-10-27 15:54:35,317 - INFO - Fetched 46 bookings.
+2024-10-27 15:54:35,341 - INFO - 127.0.0.1 - - [27/Oct/2024 15:54:35] "GET /view_bookings HTTP/1.1" 200 -
+2024-10-27 15:56:23,027 - INFO -  * Detected change in 'c:\\Users\\anuz9\\OneDrive - University of the Sunshine Coast\\Desktop\\Task3_Ict320_anuj-gupta\\Ict320-task3\\flask\\app.py', reloading
+2024-10-27 15:56:23,126 - INFO -  * Restarting with stat
+2024-10-27 15:56:23,872 - INFO - Campground application logging setup complete.
+2024-10-27 15:56:23,872 - WARNING - This is a warning message that will appear in the console and log file.
+2024-10-27 15:56:23,913 - INFO - Directory pdfs already exists.
+2024-10-27 15:56:23,947 - WARNING -  * Debugger is active!
+2024-10-27 15:56:23,947 - INFO -  * Debugger PIN: 140-675-533
+2024-10-27 15:56:30,516 - INFO - 127.0.0.1 - - [27/Oct/2024 15:56:30] "[33mGET /end_of_day HTTP/1.1[0m" 404 -
+2024-10-27 15:56:34,735 - INFO - 127.0.0.1 - - [27/Oct/2024 15:56:34] "[33mGET /end_of_day HTTP/1.1[0m" 404 -
+2024-10-27 15:57:05,565 - INFO - 127.0.0.1 - - [27/Oct/2024 15:57:05] "[33mGET /end_of_day HTTP/1.1[0m" 404 -
+2024-10-27 15:57:07,273 - INFO - 127.0.0.1 - - [27/Oct/2024 15:57:07] "[33mGET /end_of_day HTTP/1.1[0m" 404 -
+2024-10-27 15:57:10,036 - INFO - 127.0.0.1 - - [27/Oct/2024 15:57:10] "GET / HTTP/1.1" 200 -
+2024-10-27 15:57:12,399 - INFO - Connected to Cosmos DB container 'Bookings' successfully.
+2024-10-27 15:57:12,648 - INFO - Fetched 46 bookings.
+2024-10-27 15:57:12,648 - INFO - Summary for Campground 1159010 on 2024-10-27 is valid.
+2024-10-27 15:57:12,648 - INFO - Summary created and validated for 2024-10-27 00:00:00.
+2024-10-27 15:57:12,938 - INFO - Connected to Local SQL database successfully.
+2024-10-27 15:57:13,006 - INFO - Summary inserted into local SQL database.
+2024-10-27 15:57:13,006 - INFO - Summary inserted into the local SQL database.
+2024-10-27 15:57:13,255 - INFO - Connected to Head Office SQL database successfully.
+2024-10-27 15:57:13,327 - INFO - Summary inserted into Head Office database.
+2024-10-27 15:57:13,327 - INFO - Summary inserted into the Head Office database.
+2024-10-27 15:57:13,363 - INFO - PDF saved as pdfs\summary_2024-10-27.pdf
+2024-10-27 15:57:13,477 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-27 15:57:13,671 - INFO - PDF pdfs\summary_2024-10-27.pdf upserted successfully for booking 1159010_2024-10-27.
+2024-10-27 15:57:13,671 - INFO - Summary PDF upserted into Cosmos DB successfully.
+2024-10-27 15:57:13,671 - INFO - Summary processing completed successfully.
+2024-10-27 15:57:13,672 - ERROR - Error processing end of day: generate_booking_confirmation() takes 1 positional argument but 2 were given
+2024-10-27 15:57:13,673 - INFO - 127.0.0.1 - - [27/Oct/2024 15:57:13] "[32mGET /summary HTTP/1.1[0m" 302 -
+2024-10-27 15:57:13,680 - INFO - 127.0.0.1 - - [27/Oct/2024 15:57:13] "GET /error HTTP/1.1" 200 -
+2024-10-27 16:02:55,575 - INFO -  * Detected change in 'c:\\Users\\anuz9\\OneDrive - University of the Sunshine Coast\\Desktop\\Task3_Ict320_anuj-gupta\\Ict320-task3\\flask\\app.py', reloading
+2024-10-27 16:02:55,639 - INFO -  * Restarting with stat
+2024-10-27 16:02:57,485 - INFO - Campground application logging setup complete.
+2024-10-27 16:02:57,493 - WARNING - This is a warning message that will appear in the console and log file.
+2024-10-27 16:02:57,667 - INFO - Directory pdfs already exists.
+2024-10-27 16:02:57,727 - WARNING -  * Debugger is active!
+2024-10-27 16:02:57,731 - INFO -  * Debugger PIN: 140-675-533
+2024-10-27 16:03:02,747 - INFO - Connected to Cosmos DB container 'Bookings' successfully.
+2024-10-27 16:03:02,919 - INFO - Fetched 46 bookings.
+2024-10-27 16:03:02,919 - INFO - Summary for Campground 1159010 on 2024-10-27 is valid.
+2024-10-27 16:03:02,919 - INFO - Summary created and validated for 2024-10-27 00:00:00.
+2024-10-27 16:03:03,250 - INFO - Connected to Local SQL database successfully.
+2024-10-27 16:03:03,329 - INFO - Summary inserted into local SQL database.
+2024-10-27 16:03:03,329 - INFO - Summary inserted into the local SQL database.
+2024-10-27 16:03:03,628 - INFO - Connected to Head Office SQL database successfully.
+2024-10-27 16:03:03,732 - INFO - Summary inserted into Head Office database.
+2024-10-27 16:03:03,732 - INFO - Summary inserted into the Head Office database.
+2024-10-27 16:03:03,767 - INFO - PDF saved as pdfs\summary_2024-10-27.pdf
+2024-10-27 16:03:03,872 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-27 16:03:04,082 - INFO - PDF pdfs\summary_2024-10-27.pdf upserted successfully for booking 1159010_2024-10-27.
+2024-10-27 16:03:04,082 - INFO - Summary PDF upserted into Cosmos DB successfully.
+2024-10-27 16:03:04,082 - INFO - Summary processing completed successfully.
+2024-10-27 16:03:04,082 - ERROR - Error processing end of day: generate_summary_report() missing 1 required positional argument: 'campsites'
+2024-10-27 16:03:04,082 - INFO - 127.0.0.1 - - [27/Oct/2024 16:03:04] "[32mGET /summary HTTP/1.1[0m" 302 -
+2024-10-27 16:03:04,112 - INFO - 127.0.0.1 - - [27/Oct/2024 16:03:04] "GET /error HTTP/1.1" 200 -
+2024-10-27 16:03:06,462 - INFO - 127.0.0.1 - - [27/Oct/2024 16:03:06] "GET / HTTP/1.1" 200 -
+2024-10-27 16:07:42,296 - INFO - Campground application logging setup complete.
+2024-10-27 16:07:42,298 - WARNING - This is a warning message that will appear in the console and log file.
+2024-10-27 16:07:42,350 - INFO - Directory pdfs already exists.
+2024-10-27 16:07:42,399 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-27 16:07:42,399 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-27 16:07:42,399 - INFO -  * Restarting with stat
+2024-10-27 16:07:42,941 - INFO - Campground application logging setup complete.
+2024-10-27 16:07:42,941 - WARNING - This is a warning message that will appear in the console and log file.
+2024-10-27 16:07:42,984 - INFO - Directory pdfs already exists.
+2024-10-27 16:07:43,016 - WARNING -  * Debugger is active!
+2024-10-27 16:07:43,016 - INFO -  * Debugger PIN: 140-675-533
+2024-10-27 16:07:49,110 - INFO - 127.0.0.1 - - [27/Oct/2024 16:07:49] "GET / HTTP/1.1" 200 -
+2024-10-27 16:07:52,302 - INFO - Connected to Cosmos DB container 'Bookings' successfully.
+2024-10-27 16:07:52,531 - INFO - Fetched 46 bookings.
+2024-10-27 16:07:52,531 - INFO - Summary for Campground 1159010 on 2024-10-27 is valid.
+2024-10-27 16:07:52,531 - INFO - Summary created and validated for 2024-10-27 00:00:00.
+2024-10-27 16:07:52,841 - INFO - Connected to Local SQL database successfully.
+2024-10-27 16:07:52,921 - INFO - Summary inserted into local SQL database.
+2024-10-27 16:07:52,921 - INFO - Summary inserted into the local SQL database.
+2024-10-27 16:07:53,205 - INFO - Connected to Head Office SQL database successfully.
+2024-10-27 16:07:53,286 - INFO - Summary inserted into Head Office database.
+2024-10-27 16:07:53,286 - INFO - Summary inserted into the Head Office database.
+2024-10-27 16:07:53,313 - INFO - PDF saved as pdfs\summary_2024-10-27.pdf
+2024-10-27 16:07:53,438 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-27 16:07:53,653 - INFO - PDF pdfs\summary_2024-10-27.pdf upserted successfully for booking 1159010_2024-10-27.
+2024-10-27 16:07:53,653 - INFO - Summary PDF upserted into Cosmos DB successfully.
+2024-10-27 16:07:53,653 - INFO - Summary processing completed successfully.
+2024-10-27 16:07:53,653 - ERROR - Error processing end of day: 'Summary' object has no attribute 'pdf_path'
+2024-10-27 16:07:53,664 - INFO - 127.0.0.1 - - [27/Oct/2024 16:07:53] "[32mGET /summary HTTP/1.1[0m" 302 -
+2024-10-27 16:07:53,676 - INFO - 127.0.0.1 - - [27/Oct/2024 16:07:53] "GET /error HTTP/1.1" 200 -
+2024-10-27 16:13:59,513 - INFO -  * Detected change in 'c:\\Users\\anuz9\\OneDrive - University of the Sunshine Coast\\Desktop\\Task3_Ict320_anuj-gupta\\Ict320-task3\\flask\\app.py', reloading
+2024-10-27 16:13:59,565 - INFO -  * Restarting with stat
+2024-10-27 16:14:00,126 - INFO - Campground application logging setup complete.
+2024-10-27 16:14:00,126 - WARNING - This is a warning message that will appear in the console and log file.
+2024-10-27 16:14:00,176 - INFO - Directory pdfs already exists.
+2024-10-27 16:14:00,200 - WARNING -  * Debugger is active!
+2024-10-27 16:14:00,208 - INFO -  * Debugger PIN: 140-675-533
+2024-10-27 16:14:43,763 - INFO - 127.0.0.1 - - [27/Oct/2024 16:14:43] "GET /error HTTP/1.1" 200 -
+2024-10-27 16:14:49,030 - INFO - Connected to Cosmos DB container 'Bookings' successfully.
+2024-10-27 16:14:49,264 - INFO - Fetched 46 bookings.
+2024-10-27 16:14:49,264 - INFO - Summary for Campground 1159010 on 2024-10-27 is valid.
+2024-10-27 16:14:49,264 - INFO - Summary created and validated for 2024-10-27 00:00:00.
+2024-10-27 16:14:49,265 - ERROR - Error processing end of day: PDFGenerator.__init__() missing 1 required positional argument: 'title'
+2024-10-27 16:14:49,265 - INFO - 127.0.0.1 - - [27/Oct/2024 16:14:49] "[32mGET /summary HTTP/1.1[0m" 302 -
+2024-10-27 16:14:49,270 - INFO - 127.0.0.1 - - [27/Oct/2024 16:14:49] "GET /error HTTP/1.1" 200 -
+2024-10-27 16:16:10,422 - INFO -  * Detected change in 'c:\\Users\\anuz9\\OneDrive - University of the Sunshine Coast\\Desktop\\Task3_Ict320_anuj-gupta\\Ict320-task3\\flask\\app.py', reloading
+2024-10-27 16:16:10,467 - INFO -  * Restarting with stat
+2024-10-27 16:16:10,960 - INFO - Campground application logging setup complete.
+2024-10-27 16:16:10,960 - WARNING - This is a warning message that will appear in the console and log file.
+2024-10-27 16:16:11,000 - INFO - Directory pdfs already exists.
+2024-10-27 16:16:11,026 - WARNING -  * Debugger is active!
+2024-10-27 16:16:11,026 - INFO -  * Debugger PIN: 140-675-533
+2024-10-27 16:16:19,976 - INFO - Connected to Cosmos DB container 'Bookings' successfully.
+2024-10-27 16:16:20,247 - INFO - Fetched 46 bookings.
+2024-10-27 16:16:20,247 - INFO - Summary for Campground 1159010 on 2024-10-27 is valid.
+2024-10-27 16:16:20,247 - INFO - Summary created and validated for 2024-10-27 00:00:00.
+2024-10-27 16:16:20,249 - INFO - PDF saved as pdfs\summary_2024-10-27.pdf
+2024-10-27 16:16:20,249 - ERROR - Error processing end of day: [WinError 3] The system cannot find the path specified: 'c:\\Users\\anuz9\\OneDrive - University of the Sunshine Coast\\Desktop\\Task3_Ict320_anuj-gupta\\Ict320-task3\\flask\\pdfs\\summary_2024-10-27.pdf'
+2024-10-27 16:16:20,251 - INFO - 127.0.0.1 - - [27/Oct/2024 16:16:20] "[32mGET /summary HTTP/1.1[0m" 302 -
+2024-10-27 16:16:20,259 - INFO - 127.0.0.1 - - [27/Oct/2024 16:16:20] "GET /error HTTP/1.1" 200 -
+2024-10-27 16:52:33,233 - INFO -  * Detected change in 'c:\\Users\\anuz9\\OneDrive - University of the Sunshine Coast\\Desktop\\Task3_Ict320_anuj-gupta\\Ict320-task3\\flask\\app.py', reloading
+2024-10-27 16:52:33,345 - INFO -  * Restarting with stat
+2024-10-27 16:52:33,805 - INFO - Campground application logging setup complete.
+2024-10-27 16:52:33,806 - WARNING - This is a warning message that will appear in the console and log file.
+2024-10-27 16:52:33,997 - INFO - Directory pdfs already exists.
+2024-10-27 16:52:34,468 - INFO - Campground application logging setup complete.
+2024-10-27 16:52:34,483 - WARNING - This is a warning message that will appear in the console and log file.
+2024-10-27 16:52:34,651 - INFO - Directory pdfs already exists.
+2024-10-27 17:12:54,765 - INFO - Campground application logging setup complete.
+2024-10-27 17:12:54,766 - WARNING - This is a warning message that will appear in the console and log file.
+2024-10-27 17:12:54,970 - INFO - Directory pdfs already exists.
+2024-10-27 17:12:55,661 - INFO - Connected to Cosmos DB container 'Bookings' successfully.
+2024-10-27 17:12:55,661 - INFO - Initialized 30 campsites: 10 Small, 10 Medium, 10 Large.
+2024-10-27 17:12:55,704 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.4.33:5000
+2024-10-27 17:12:55,704 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-27 17:12:55,704 - INFO -  * Restarting with stat
+2024-10-27 17:12:56,158 - INFO - Campground application logging setup complete.
+2024-10-27 17:12:56,159 - WARNING - This is a warning message that will appear in the console and log file.
+2024-10-27 17:12:56,442 - INFO - Directory pdfs already exists.
+2024-10-27 17:12:57,175 - INFO - Connected to Cosmos DB container 'Bookings' successfully.
+2024-10-27 17:12:57,175 - INFO - Initialized 30 campsites: 10 Small, 10 Medium, 10 Large.
+2024-10-27 17:12:57,200 - WARNING -  * Debugger is active!
+2024-10-27 17:12:57,208 - INFO -  * Debugger PIN: 140-675-533
+2024-10-27 17:13:17,772 - INFO - 127.0.0.1 - - [27/Oct/2024 17:13:17] "GET / HTTP/1.1" 200 -
+2024-10-27 17:13:22,364 - INFO - Fetched 46 bookings.
+2024-10-27 17:13:22,364 - ERROR - Error fetching bookings: Object of type Booking is not JSON serializable
+2024-10-27 17:13:22,365 - INFO - 127.0.0.1 - - [27/Oct/2024 17:13:22] "[35m[1mGET /view-bookings HTTP/1.1[0m" 500 -
+2024-10-27 17:13:32,624 - INFO - Fetched 46 bookings.
+2024-10-27 17:13:32,626 - INFO - Generating summary report from booking data.
+2024-10-27 17:13:32,626 - INFO - Summary Data: {'date': datetime.date(2024, 10, 27), 'total_sales': 24640, 'total_bookings': 46, 'successful_allocations': 46, 'failed_allocations': 0, 'campsite_utilization': {1: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 0}, 2: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 0}, 3: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 0}, 4: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 0}, 5: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 0}, 6: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 0}, 7: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 0}, 8: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 0}, 9: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 0}, 10: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 0}, 11: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 12: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 13: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 14: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 15: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 16: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 17: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 18: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 19: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 20: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 21: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 22: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 23: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 24: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 25: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 26: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 27: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 28: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 29: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 30: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}}}
+2024-10-27 17:13:32,626 - ERROR - Error generating daily summary: 'dict' object has no attribute 'campground_id'
+2024-10-27 17:13:32,626 - INFO - 127.0.0.1 - - [27/Oct/2024 17:13:32] "[35m[1mGET /generate-summary HTTP/1.1[0m" 500 -
+2024-10-27 17:15:35,360 - INFO -  * Detected change in 'c:\\Users\\anuz9\\OneDrive - University of the Sunshine Coast\\Desktop\\Task3_Ict320_anuj-gupta\\Ict320-task3\\flask\\app.py', reloading
+2024-10-27 17:15:35,398 - INFO -  * Restarting with stat
+2024-10-27 17:15:35,695 - INFO - Campground application logging setup complete.
+2024-10-27 17:15:35,695 - WARNING - This is a warning message that will appear in the console and log file.
+2024-10-27 17:15:35,924 - INFO - Directory pdfs already exists.
+2024-10-27 17:15:37,731 - INFO - Connected to Cosmos DB container 'Bookings' successfully.
+2024-10-27 17:15:37,731 - INFO - Initialized 30 campsites: 10 Small, 10 Medium, 10 Large.
+2024-10-27 17:15:37,757 - WARNING -  * Debugger is active!
+2024-10-27 17:15:37,762 - INFO -  * Debugger PIN: 140-675-533
+2024-10-27 17:15:48,003 - INFO - Fetched 46 bookings.
+2024-10-27 17:15:48,003 - ERROR - Error fetching bookings: Object of type Booking is not JSON serializable
+2024-10-27 17:15:48,004 - INFO - 127.0.0.1 - - [27/Oct/2024 17:15:48] "[35m[1mGET /view-bookings HTTP/1.1[0m" 500 -
+2024-10-27 17:15:53,934 - INFO - Fetched 46 bookings.
+2024-10-27 17:15:53,934 - INFO - Generating summary report from booking data.
+2024-10-27 17:15:53,934 - INFO - Summary Data: {'date': datetime.date(2024, 10, 27), 'total_sales': 24640, 'total_bookings': 46, 'successful_allocations': 46, 'failed_allocations': 0, 'campsite_utilization': {1: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 0}, 2: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 0}, 3: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 0}, 4: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 0}, 5: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 0}, 6: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 0}, 7: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 0}, 8: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 0}, 9: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 0}, 10: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 0}, 11: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 12: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 13: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 14: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 15: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 16: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 17: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 18: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 19: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 20: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 21: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 22: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 23: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 24: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 25: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 26: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 27: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 28: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 29: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 30: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}}}
+2024-10-27 17:15:53,934 - ERROR - Error generating daily summary: 'dict' object has no attribute 'campground_id'
+2024-10-27 17:15:53,934 - INFO - 127.0.0.1 - - [27/Oct/2024 17:15:53] "[35m[1mGET /generate-summary HTTP/1.1[0m" 500 -
+2024-10-27 17:18:40,308 - INFO -  * Detected change in 'c:\\Users\\anuz9\\OneDrive - University of the Sunshine Coast\\Desktop\\Task3_Ict320_anuj-gupta\\Ict320-task3\\models\\booking.py', reloading
+2024-10-27 17:18:40,368 - INFO -  * Restarting with stat
+2024-10-27 17:18:40,737 - INFO - Campground application logging setup complete.
+2024-10-27 17:18:40,737 - WARNING - This is a warning message that will appear in the console and log file.
+2024-10-27 17:18:40,946 - INFO - Directory pdfs already exists.
+2024-10-27 17:18:41,666 - INFO - Connected to Cosmos DB container 'Bookings' successfully.
+2024-10-27 17:18:41,666 - INFO - Initialized 30 campsites: 10 Small, 10 Medium, 10 Large.
+2024-10-27 17:18:41,682 - WARNING -  * Debugger is active!
+2024-10-27 17:18:41,691 - INFO -  * Debugger PIN: 140-675-533
+2024-10-27 17:19:45,986 - INFO -  * Detected change in 'c:\\Users\\anuz9\\OneDrive - University of the Sunshine Coast\\Desktop\\Task3_Ict320_anuj-gupta\\Ict320-task3\\flask\\app.py', reloading
+2024-10-27 17:19:46,031 - INFO -  * Restarting with stat
+2024-10-27 17:19:46,324 - INFO - Campground application logging setup complete.
+2024-10-27 17:19:46,324 - WARNING - This is a warning message that will appear in the console and log file.
+2024-10-27 17:19:46,562 - INFO - Directory pdfs already exists.
+2024-10-27 17:19:47,287 - INFO - Connected to Cosmos DB container 'Bookings' successfully.
+2024-10-27 17:19:47,287 - INFO - Initialized 30 campsites: 10 Small, 10 Medium, 10 Large.
+2024-10-27 17:19:47,320 - WARNING -  * Debugger is active!
+2024-10-27 17:19:47,329 - INFO -  * Debugger PIN: 140-675-533
+2024-10-27 17:19:57,293 - INFO - Fetched 46 bookings.
+2024-10-27 17:19:57,294 - INFO - 127.0.0.1 - - [27/Oct/2024 17:19:57] "GET /view-bookings HTTP/1.1" 200 -
+2024-10-27 17:20:16,624 - INFO - Fetched 46 bookings.
+2024-10-27 17:20:16,624 - INFO - Generating summary report from booking data.
+2024-10-27 17:20:16,624 - INFO - Summary Data: {'date': datetime.date(2024, 10, 27), 'total_sales': 24640, 'total_bookings': 46, 'successful_allocations': 46, 'failed_allocations': 0, 'campsite_utilization': {1: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 0}, 2: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 0}, 3: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 0}, 4: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 0}, 5: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 0}, 6: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 0}, 7: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 0}, 8: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 0}, 9: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 0}, 10: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 0}, 11: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 12: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 13: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 14: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 15: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 16: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 17: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 18: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 19: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 20: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 21: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 22: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 23: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 24: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 25: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 26: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 27: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 28: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 29: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 30: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}}}
+2024-10-27 17:20:16,627 - ERROR - Error generating daily summary: 'dict' object has no attribute 'campground_id'
+2024-10-27 17:20:16,628 - INFO - 127.0.0.1 - - [27/Oct/2024 17:20:16] "[35m[1mGET /generate-summary HTTP/1.1[0m" 500 -
+2024-10-27 17:22:14,967 - INFO -  * Detected change in 'c:\\Users\\anuz9\\OneDrive - University of the Sunshine Coast\\Desktop\\Task3_Ict320_anuj-gupta\\Ict320-task3\\flask\\app.py', reloading
+2024-10-27 17:22:15,077 - INFO -  * Restarting with stat
+2024-10-27 17:22:15,538 - INFO - Campground application logging setup complete.
+2024-10-27 17:22:15,539 - WARNING - This is a warning message that will appear in the console and log file.
+2024-10-27 17:22:15,699 - INFO - Directory pdfs already exists.
+2024-10-27 17:22:16,414 - INFO - Connected to Cosmos DB container 'Bookings' successfully.
+2024-10-27 17:22:16,414 - INFO - Initialized 30 campsites: 10 Small, 10 Medium, 10 Large.
+2024-10-27 17:22:16,441 - WARNING -  * Debugger is active!
+2024-10-27 17:22:16,448 - INFO -  * Debugger PIN: 140-675-533
+2024-10-27 17:23:49,839 - INFO -  * Detected change in 'c:\\Users\\anuz9\\OneDrive - University of the Sunshine Coast\\Desktop\\Task3_Ict320_anuj-gupta\\Ict320-task3\\flask\\app.py', reloading
+2024-10-27 17:23:49,927 - INFO -  * Restarting with stat
+2024-10-27 17:23:50,259 - INFO - Campground application logging setup complete.
+2024-10-27 17:23:50,259 - WARNING - This is a warning message that will appear in the console and log file.
+2024-10-27 17:23:50,466 - INFO - Directory pdfs already exists.
+2024-10-27 17:23:51,149 - INFO - Connected to Cosmos DB container 'Bookings' successfully.
+2024-10-27 17:23:51,149 - INFO - Initialized 30 campsites: 10 Small, 10 Medium, 10 Large.
+2024-10-27 17:23:51,165 - WARNING -  * Debugger is active!
+2024-10-27 17:23:51,176 - INFO -  * Debugger PIN: 140-675-533
+2024-10-27 17:23:59,910 - INFO - 127.0.0.1 - - [27/Oct/2024 17:23:59] "GET / HTTP/1.1" 200 -
+2024-10-27 17:24:02,072 - INFO - Fetched 46 bookings.
+2024-10-27 17:24:02,072 - ERROR - Error generating daily summary: 'Booking' object is not subscriptable
+2024-10-27 17:24:02,072 - INFO - 127.0.0.1 - - [27/Oct/2024 17:24:02] "[35m[1mGET /generate-summary HTTP/1.1[0m" 500 -
+2024-10-27 17:26:49,683 - INFO -  * Detected change in 'c:\\Users\\anuz9\\OneDrive - University of the Sunshine Coast\\Desktop\\Task3_Ict320_anuj-gupta\\Ict320-task3\\Utils\\manage_summary.py', reloading
+2024-10-27 17:26:49,728 - INFO -  * Restarting with stat
+2024-10-27 17:26:50,029 - INFO - Campground application logging setup complete.
+2024-10-27 17:26:50,029 - WARNING - This is a warning message that will appear in the console and log file.
+2024-10-27 17:26:50,233 - INFO - Directory pdfs already exists.
+2024-10-27 17:26:50,929 - INFO - Connected to Cosmos DB container 'Bookings' successfully.
+2024-10-27 17:26:50,930 - INFO - Initialized 30 campsites: 10 Small, 10 Medium, 10 Large.
+2024-10-27 17:26:50,963 - WARNING -  * Debugger is active!
+2024-10-27 17:26:50,971 - INFO -  * Debugger PIN: 140-675-533
+2024-10-27 17:26:58,386 - INFO - Fetched 46 bookings.
+2024-10-27 17:26:58,386 - ERROR - Error generating daily summary: 'Booking' object is not subscriptable
+2024-10-27 17:26:58,386 - INFO - 127.0.0.1 - - [27/Oct/2024 17:26:58] "[35m[1mGET /generate-summary HTTP/1.1[0m" 500 -
+2024-10-27 17:27:00,094 - INFO - Fetched 46 bookings.
+2024-10-27 17:27:00,109 - ERROR - Error generating daily summary: 'Booking' object is not subscriptable
+2024-10-27 17:27:00,109 - INFO - 127.0.0.1 - - [27/Oct/2024 17:27:00] "[35m[1mGET /generate-summary HTTP/1.1[0m" 500 -
+2024-10-27 17:27:02,901 - INFO - Fetched 46 bookings.
+2024-10-27 17:27:02,901 - ERROR - Error generating daily summary: 'Booking' object is not subscriptable
+2024-10-27 17:27:02,901 - INFO - 127.0.0.1 - - [27/Oct/2024 17:27:02] "[35m[1mGET /generate-summary HTTP/1.1[0m" 500 -
+2024-10-27 17:31:14,778 - INFO -  * Detected change in 'c:\\Users\\anuz9\\OneDrive - University of the Sunshine Coast\\Desktop\\Task3_Ict320_anuj-gupta\\Ict320-task3\\Utils\\manage_summary.py', reloading
+2024-10-27 17:31:14,853 - INFO -  * Restarting with stat
+2024-10-27 17:31:15,161 - INFO - Campground application logging setup complete.
+2024-10-27 17:31:15,161 - WARNING - This is a warning message that will appear in the console and log file.
+2024-10-27 17:31:15,396 - INFO - Directory pdfs already exists.
+2024-10-27 17:31:16,194 - INFO - Connected to Cosmos DB container 'Bookings' successfully.
+2024-10-27 17:31:16,194 - INFO - Initialized 30 campsites: 10 Small, 10 Medium, 10 Large.
+2024-10-27 17:31:16,210 - WARNING -  * Debugger is active!
+2024-10-27 17:31:16,219 - INFO -  * Debugger PIN: 140-675-533
+2024-10-27 17:31:22,746 - INFO - Fetched 46 bookings.
+2024-10-27 17:31:22,746 - ERROR - Error generating daily summary: 'Booking' object is not subscriptable
+2024-10-27 17:31:22,746 - INFO - 127.0.0.1 - - [27/Oct/2024 17:31:22] "[35m[1mGET /generate-summary HTTP/1.1[0m" 500 -
+2024-10-27 17:31:24,735 - INFO - Fetched 46 bookings.
+2024-10-27 17:31:24,735 - ERROR - Error generating daily summary: 'Booking' object is not subscriptable
+2024-10-27 17:31:24,735 - INFO - 127.0.0.1 - - [27/Oct/2024 17:31:24] "[35m[1mGET /generate-summary HTTP/1.1[0m" 500 -
+2024-10-27 17:35:07,791 - INFO -  * Detected change in 'c:\\Users\\anuz9\\OneDrive - University of the Sunshine Coast\\Desktop\\Task3_Ict320_anuj-gupta\\Ict320-task3\\models\\booking.py', reloading
+2024-10-27 17:35:07,866 - INFO -  * Restarting with stat
+2024-10-27 17:35:08,188 - INFO - Campground application logging setup complete.
+2024-10-27 17:35:08,188 - WARNING - This is a warning message that will appear in the console and log file.
+2024-10-27 17:35:08,394 - INFO - Directory pdfs already exists.
+2024-10-27 17:35:09,073 - INFO - Connected to Cosmos DB container 'Bookings' successfully.
+2024-10-27 17:35:09,073 - INFO - Initialized 30 campsites: 10 Small, 10 Medium, 10 Large.
+2024-10-27 17:35:09,098 - WARNING -  * Debugger is active!
+2024-10-27 17:35:09,106 - INFO -  * Debugger PIN: 140-675-533
+2024-10-27 17:36:05,422 - INFO - Fetched 46 bookings.
+2024-10-27 17:36:05,423 - ERROR - Error generating daily summary: 'Booking' object is not subscriptable
+2024-10-27 17:36:05,425 - INFO - 127.0.0.1 - - [27/Oct/2024 17:36:05] "[35m[1mGET /generate-summary HTTP/1.1[0m" 500 -
+2024-10-27 17:42:09,740 - INFO -  * Detected change in 'c:\\Users\\anuz9\\OneDrive - University of the Sunshine Coast\\Desktop\\Task3_Ict320_anuj-gupta\\Ict320-task3\\flask\\app.py', reloading
+2024-10-27 17:42:09,824 - INFO -  * Restarting with stat
+2024-10-27 17:42:10,226 - INFO - Campground application logging setup complete.
+2024-10-27 17:42:10,226 - WARNING - This is a warning message that will appear in the console and log file.
+2024-10-27 17:42:10,466 - INFO - Directory pdfs already exists.
+2024-10-27 17:42:11,165 - INFO - Connected to Cosmos DB container 'Bookings' successfully.
+2024-10-27 17:42:11,165 - INFO - Initialized 30 campsites: 10 Small, 10 Medium, 10 Large.
+2024-10-27 17:42:11,190 - WARNING -  * Debugger is active!
+2024-10-27 17:42:11,190 - INFO -  * Debugger PIN: 140-675-533
+2024-10-27 17:42:19,299 - INFO - Fetched 46 bookings.
+2024-10-27 17:42:19,299 - ERROR - Error generating daily summary: 'Booking' object is not subscriptable
+2024-10-27 17:42:19,314 - INFO - 127.0.0.1 - - [27/Oct/2024 17:42:19] "[35m[1mGET /generate-summary HTTP/1.1[0m" 500 -
+2024-10-27 17:42:20,739 - INFO - Fetched 46 bookings.
+2024-10-27 17:42:20,739 - ERROR - Error generating daily summary: 'Booking' object is not subscriptable
+2024-10-27 17:42:20,739 - INFO - 127.0.0.1 - - [27/Oct/2024 17:42:20] "[35m[1mGET /generate-summary HTTP/1.1[0m" 500 -
+2024-10-27 17:47:57,995 - INFO -  * Detected change in 'c:\\Users\\anuz9\\OneDrive - University of the Sunshine Coast\\Desktop\\Task3_Ict320_anuj-gupta\\Ict320-task3\\Utils\\manage_summary.py', reloading
+2024-10-27 17:47:58,054 - INFO -  * Restarting with stat
+2024-10-27 17:47:58,371 - INFO - Campground application logging setup complete.
+2024-10-27 17:47:58,371 - WARNING - This is a warning message that will appear in the console and log file.
+2024-10-27 17:47:58,631 - INFO - Directory pdfs already exists.
+2024-10-27 17:47:59,487 - INFO - Connected to Cosmos DB container 'Bookings' successfully.
+2024-10-27 17:47:59,488 - INFO - Initialized 30 campsites: 10 Small, 10 Medium, 10 Large.
+2024-10-27 17:47:59,511 - WARNING -  * Debugger is active!
+2024-10-27 17:47:59,516 - INFO -  * Debugger PIN: 140-675-533
+2024-10-27 17:48:05,168 - INFO - Fetched 46 bookings.
+2024-10-27 17:48:05,168 - ERROR - Error generating daily summary: 'Booking' object is not subscriptable
+2024-10-27 17:48:05,169 - INFO - 127.0.0.1 - - [27/Oct/2024 17:48:05] "[35m[1mGET /generate-summary HTTP/1.1[0m" 500 -
+2024-10-27 17:48:06,471 - INFO - Fetched 46 bookings.
+2024-10-27 17:48:06,471 - ERROR - Error generating daily summary: 'Booking' object is not subscriptable
+2024-10-27 17:48:06,471 - INFO - 127.0.0.1 - - [27/Oct/2024 17:48:06] "[35m[1mGET /generate-summary HTTP/1.1[0m" 500 -

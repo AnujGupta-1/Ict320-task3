@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <div class="jumbotron">
+        <h1 class="display-4">Welcome to the Campsite Booking System!</h1>
+        <p class="lead">Manage your bookings, generate reports, and more.</p>
+        <hr class="my-4">
+        <a class="btn btn-primary btn-lg" href="/view-bookings" role="button">View Bookings</a>
+        <a class="btn btn-secondary btn-lg" href="/generate-summary" role="button">Generate Summary</a>
+    </div>
+{% endblock %}

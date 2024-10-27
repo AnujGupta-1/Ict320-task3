@@ -1,10 +1,14 @@
 from datetime import datetime
 import logging
+import sys
+import os
+from azure.cosmos import exceptions
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from Database.sqlDB import connect_to_sql
 from Database.headOfficeDB import connect_to_head_office
 from models.summary import Summary
 from Utils.pdf_generator import PDFGenerator
-from Database.cosmosDB import connect_to_cosmos, upsert_booking_pdf_to_cosmos #upsert_summary_pdf_to_cosmos
+from Database.cosmosDB import connect_to_cosmos, upsert_booking_pdf_to_cosmos
 from Utils.logger_config import logger
 
 
@@ -19,7 +23,7 @@ def create_summary_object(bookings):
     total_bookings = len([booking for booking in bookings if booking.campsite_id is not None])
 
     summary = Summary(
-        campground_id=1121132,  # Your student ID as campground ID
+        campground_id=1159010,  # Your student ID as campground ID
         summary_date=datetime.now().date(),
         total_sales=total_sales,
         total_bookings=total_bookings
@@ -28,6 +32,8 @@ def create_summary_object(bookings):
     summary.validate()
     logger.info(f"Summary created and validated for {summary.summary_date}.")
     return summary
+
+
 
 
 def process_summary(summary):
@@ -40,8 +46,9 @@ def process_summary(summary):
         # Insert summary into local and Head Office databases
         insert_summary_into_databases(summary)
 
-        # Generate and save the summary PDF
-        pdf_path = generate_summary_pdf(summary)
+        # Generate and save the summary PDF using the updated PDFGenerator
+        pdf_gen = PDFGenerator("Daily Summary Report")
+        pdf_path = pdf_gen.generate_summary(summary)
 
         # Upsert the summary PDF into Cosmos DB
         upload_summary_to_cosmos(pdf_path, summary)
@@ -124,23 +131,6 @@ def execute_db_query(conn, query, data):
         raise e
 
 
-def generate_summary_pdf(summary):
-    """
-    Generates a PDF for the summary report.
-
-    :param summary: The Summary object containing the summary details.
-    :return: Path to the generated PDF.
-    """
-    try:
-        pdf_gen = PDFGenerator("Daily Summary Report")
-        pdf_path = pdf_gen.generate_summary(summary)
-        logger.info("Summary PDF generated and saved.")
-        return pdf_path
-    except Exception as e:
-        logger.error(f"Error generating summary PDF: {e}")
-        raise e
-
-
 def upload_summary_to_cosmos(pdf_path, summary):
     """
     Uploads the summary PDF to Cosmos DB.
@@ -149,10 +139,32 @@ def upload_summary_to_cosmos(pdf_path, summary):
     :param summary: The Summary object containing the summary details.
     """
     try:
-        summary_container = connect_to_cosmos("Summary_PDFs")
+        # Ensure the PDF file exists before attempting the upload
+        if not os.path.exists(pdf_path):
+            logger.error(f"PDF file does not exist: {pdf_path}")
+            return False
+        
+        # Connect to the Cosmos DB container
+        summary_container = connect_to_cosmos("PDFs")
+        
+        # Create the summary ID using campground_id and summary_date
         summary_id = f"{summary.campground_id}_{summary.summary_date.strftime('%Y-%m-%d')}"
-        upsert_booking_pdf_to_cosmos(summary_container, pdf_path, summary_id)
-        logger.info("Summary PDF upserted into Cosmos DB successfully.")
+        campground_id = summary.campground_id
+        
+
+        # Upsert the summary PDF using the partition key (campground_id)
+        success = upsert_booking_pdf_to_cosmos(summary_container, pdf_path, summary_id, campground_id)
+        
+        if success:
+            logger.info("Summary PDF upserted into Cosmos DB successfully.")
+            return True
+        else:
+            logger.error("Failed to upsert summary PDF into Cosmos DB.")
+            return False
+
+    except exceptions.CosmosHttpResponseError as e:
+        logger.error(f"HTTP error while uploading summary PDF: {e.status_code} {e.message}")
+        raise e
     except Exception as e:
         logger.error(f"Error uploading summary PDF to Cosmos DB: {e}")
         raise e
@@ -168,16 +180,31 @@ def generate_summary_report(bookings, campsites):
     """
     logger.info("Generating summary report from booking data.")
 
+    # Calculate total sales (only for successfully allocated bookings)
     total_sales = sum(booking.total_cost for booking in bookings if booking.campsite_id is not None)
+
+    # Count successful allocations (bookings with campsite_id) and failed allocations
     successful_allocations = len([b for b in bookings if b.campsite_id is not None])
     failed_allocations = len(bookings) - successful_allocations
 
-    campsite_utilization = {c.site_number: {'size': c.size, 'rate_per_night': c.rate_per_night, 'bookings_count': 0} for c in campsites}
+    # Initialize campsite utilization dictionary
+    campsite_utilization = {
+        campsite.site_number: {
+            'size': campsite.size,
+            'rate_per_night': campsite.rate_per_night,
+            'bookings_count': 0
+        }
+        for campsite in campsites
+    }
 
+    # Update campsite utilization based on bookings
     for booking in bookings:
-        if booking.campsite_id is not None:
-            campsite_utilization[booking.campsite_id]['bookings_count'] += 1
+        if booking.campsite_id is not None:  # Using dot notation
+            if booking.campsite_id in campsite_utilization:
+                campsite_utilization[booking.campsite_id]['bookings_count'] += 1
 
+
+    # Prepare summary data to be returned
     summary_data = {
         'date': datetime.now().date(),
         'total_sales': total_sales,
@@ -189,20 +216,3 @@ def generate_summary_report(bookings, campsites):
 
     logger.info(f"Summary Data: {summary_data}")
     return summary_data
-
-
-def display_summary(summary_data):
-    """
-    Displays the summary report on the console.
-
-    :param summary_data: Dictionary containing summary data.
-    """
-    print("\nSummary of Booking Allocations:")
-    print(f"Total Bookings: {summary_data['total_bookings']}")
-    print(f"Successful Allocations: {summary_data['successful_allocations']}")
-    print(f"Failed Allocations: {summary_data['failed_allocations']}")
-
-    print("\nCampsite Utilization:")
-    for site_number, utilization in summary_data['campsite_utilization'].items():
-        print(f"Campsite {site_number}: Size - {utilization['size']}, "
-              f"Rate - ${utilization['rate_per_night']}, Total Bookings - {utilization['bookings_count']}")

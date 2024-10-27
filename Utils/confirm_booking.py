@@ -66,21 +66,20 @@ class BookingPDFGenerator:
         return file_path
 
 
-def insert_pdf_to_cosmos(file_path, booking_id):
+def insert_pdf_to_cosmos(file_path, booking):
     """
     Inserts the generated PDF into Cosmos DB.
 
     :param file_path: Path to the PDF file.
-    :param booking_id: The ID of the booking to associate with the PDF.
+    :param booking: The booking object to associate with the PDF.
     """
     try:
         cosmos_container = connect_to_cosmos("PDFs")
-        upsert_booking_pdf_to_cosmos(cosmos_container, file_path, booking_id)
-        logger.info(f"Successfully inserted PDF {file_path} into Cosmos DB for booking {booking_id}.")
+        upsert_booking_pdf_to_cosmos(cosmos_container, file_path, booking.booking_id, booking.campground_id)
+        logger.info(f"Successfully inserted PDF {file_path} into Cosmos DB for booking {booking.booking_id}.")
     except Exception as e:
         logger.error(f"Failed to insert PDF into Cosmos DB: {e}")
         raise
-
 
 def generate_booking_confirmation(booking):
     """
@@ -89,13 +88,12 @@ def generate_booking_confirmation(booking):
     :param booking: Booking object containing the booking details.
     """
     try:
-        # Generate and save the PDF to the 'pdfs' folder
         pdf_generator = BookingPDFGenerator(booking)
         pdf_directory = "pdfs"
         pdf_path = pdf_generator.save_pdf(pdf_directory)
 
         # Insert the PDF into Cosmos DB
-        insert_pdf_to_cosmos(pdf_path, booking.booking_id)
+        insert_pdf_to_cosmos(pdf_path, booking)
 
     except Exception as e:
         logger.error(f"An error occurred during confirmation generation for booking {booking.booking_id}: {e}")
